@@ -10,37 +10,67 @@
     h2 { font-size: 1.3rem; margin-top: 30px; }
     p, li { font-size: 1rem; color: #444; line-height: 1.6; }
     a { color: #0066cc; }
+    .compliance-box { background: #f0f7ff; border-left: 4px solid #0066cc; padding: 16px 20px; margin: 24px 0; border-radius: 4px; }
+    .compliance-box p { margin: 0; color: #333; }
   </style>
 </head>
 <body>
   <h1>MajaSam Privacy Policy</h1>
-  <p>Last updated: September 21, 2026</p>
+  <p>Last updated: September 22, 2026</p>
 
   <h2>Overview</h2>
-  <p>MajaSam is an iOS app that helps users track purchases, monitor return windows and warranties, and scan Gmail for receipts.</p>
+  <p>MajaSam is an iOS app that helps users track purchases, monitor return windows and warranties, and scan Gmail for receipts. We are committed to protecting your privacy and handling your data responsibly.</p>
 
   <h2>Gmail Data</h2>
-  <p>MajaSam requests read-only access to your Gmail account. This access is used solely to:</p>
+  <p>MajaSam requests read-only access to your Gmail account (<code>gmail.readonly</code> scope). This access is used solely to:</p>
   <ul>
     <li>Scan your inbox for purchase receipts and subscription confirmations</li>
     <li>Extract product name, price, store name, and purchase date from receipt emails</li>
     <li>Populate your personal purchase vault within the app</li>
   </ul>
-  <p>MajaSam does not store your emails. Email content is sent to our server only for AI-based receipt extraction and is not retained after processing. We do not read, store, or share emails unrelated to purchases.</p>
+  <p>MajaSam does not store your emails. Email content is sent to our server only for AI-based receipt extraction and is not retained after processing. We do not read, store, or share emails unrelated to purchases. Gmail OAuth tokens are stored securely on your device only.</p>
+  <p>You can disconnect Gmail at any time from Settings inside the MajaSam app. This revokes all Gmail access immediately.</p>
 
   <h2>Data We Collect</h2>
   <ul>
     <li>Purchase information extracted from receipts (product name, price, store, date)</li>
-    <li>Gmail OAuth tokens stored securely on your device</li>
+    <li>Gmail OAuth tokens — stored securely on your device, never on our servers</li>
+    <li>Account information (email address) used only for authentication via Supabase</li>
   </ul>
 
-  <h2>Data Sharing</h2>
-  <p>We do not sell or share your data with third parties.</p>
+  <h2>Data Protection</h2>
+  <p>We protect your data using the following mechanisms:</p>
+  <ul>
+    <li><strong>Encryption in transit:</strong> All data transmitted between the app and our servers is encrypted using TLS/HTTPS.</li>
+    <li><strong>Encryption at rest:</strong> User data stored in our database (Supabase) is encrypted at rest.</li>
+    <li><strong>Minimal data retention:</strong> Email content is processed in memory and never written to disk or stored after extraction is complete.</li>
+    <li><strong>Access controls:</strong> API endpoints are protected with authentication keys. Only your own purchases are accessible to your account.</li>
+    <li><strong>OAuth token security:</strong> Gmail OAuth tokens are stored locally on your device using secure storage and are never transmitted to or stored on our servers.</li>
+  </ul>
 
-  <h2>Revoking Access</h2>
-  <p>You can disconnect Gmail at any time from Settings inside the MajaSam app. This revokes all Gmail access immediately.</p>
+  <h2>Third-Party AI Services</h2>
+  <p>MajaSam uses OpenAI's API (GPT-4o-mini) to extract purchase details from receipt text. When you use Gmail scanning or Quick Add, relevant text is sent to OpenAI for processing.</p>
+  <p>OpenAI's API terms of service state that data submitted via the API is not used to train their models. You can review OpenAI's data usage policy at <a href="https://openai.com/policies/api-data-usage-policies" target="_blank">openai.com/policies/api-data-usage-policies</a>.</p>
+  <p>We do not use any other third-party AI services, aggregators, model gateways, or model hubs.</p>
+
+  <h2>Google API Limited Use Compliance</h2>
+  <div class="compliance-box">
+    <p>MajaSam's use of information received from Google APIs, including Gmail data, adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements. Gmail data accessed through Google APIs is used only to provide the receipt-scanning feature within MajaSam and is not transferred to, or used to train, any AI or machine learning model — including OpenAI's models. Raw or derived Google user data is never sold, shared with third parties, or used for advertising purposes.</p>
+  </div>
+
+  <h2>Data Sharing</h2>
+  <p>We do not sell your data. We do not share your personal data with third parties except as described above (OpenAI for receipt text extraction) and as required by law.</p>
+
+  <h2>Data Retention</h2>
+  <p>Purchase data you add to your vault is retained until you delete it or close your account. You can delete your account at any time from Settings → Delete Account, which permanently removes all your data from our servers.</p>
+
+  <h2>Children's Privacy</h2>
+  <p>MajaSam is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>We may update this policy from time to time. We will notify users of significant changes through the app.</p>
 
   <h2>Contact</h2>
-  <p><a href="mailto:igyasi24@gmail.com">igyasi24@gmail.com</a></p>
+  <p>If you have questions about this privacy policy, contact us at <a href="mailto:igyasi24@gmail.com">igyasi24@gmail.com</a>.</p>
 </body>
 </html>
