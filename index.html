@@ -220,6 +220,51 @@
     }
     .feature-icon.red-icon    { background: rgba(255,77,77,.12); }
     .feature-icon.purple-icon { background: rgba(138,92,255,.12); }
+
+    /* ─── TRUST STRIP ────────────────────────────────── */
+    .trust-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 24px;
+      background: var(--surface);
+    }
+    .trust-strip-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: flex; flex-direction: column; align-items: center; gap: 24px;
+    }
+    .trust-strip-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--sub2);
+    }
+    .trust-items {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 12px 18px;
+      min-width: 200px; flex: 1; max-width: 260px;
+    }
+    .trust-item-icon {
+      font-size: 20px; flex-shrink: 0;
+      width: 36px; height: 36px; border-radius: 10px;
+      background: rgba(245,166,35,.08);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .trust-item-text strong {
+      display: block; font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 2px;
+    }
+    .trust-item-text span {
+      font-size: 12px; color: var(--sub); line-height: 1.4;
+    }
+    .trust-strip-footer {
+      font-size: 12.5px; color: var(--sub2);
+    }
+    .trust-strip-footer a { color: var(--sub); }
+    .trust-strip-footer a:hover { color: var(--text); }
+    @media (max-width: 600px) {
+      .trust-item { min-width: 100%; max-width: 100%; }
+    }
     .feature-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
     .feature-card p  { font-size: 13.5px; color: var(--sub); line-height: 1.6; }
 
@@ -786,6 +831,44 @@
     </div>
   </div>
 </section>
+
+<!-- ── TRUST STRIP ─────────────────────────────────── -->
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <p class="trust-strip-label">Your data, your control</p>
+    <div class="trust-items">
+      <div class="trust-item reveal">
+        <div class="trust-item-icon">📱</div>
+        <div class="trust-item-text">
+          <strong>Stored on your device</strong>
+          <span>Your purchases live locally first. Cloud sync is optional — never automatic.</span>
+        </div>
+      </div>
+      <div class="trust-item reveal">
+        <div class="trust-item-icon">🔒</div>
+        <div class="trust-item-text">
+          <strong>Private by default</strong>
+          <span>Your data is tied to your account only. We have no access to your purchases.</span>
+        </div>
+      </div>
+      <div class="trust-item reveal">
+        <div class="trust-item-icon">📧</div>
+        <div class="trust-item-text">
+          <strong>Gmail: read-only, no storage</strong>
+          <span>MajaSam reads receipt-pattern emails only. No email content is stored on our servers.</span>
+        </div>
+      </div>
+      <div class="trust-item reveal">
+        <div class="trust-item-icon">🚫</div>
+        <div class="trust-item-text">
+          <strong>Never sold or shared</strong>
+          <span>Your purchase history is yours. We don't sell it, share it, or use it for ads.</span>
+        </div>
+      </div>
+    </div>
+    <p class="trust-strip-footer">Full details in our <a href="privacy-policy.html">Privacy Policy</a></p>
+  </div>
+</div>
 
 <!-- ── SCREENSHOTS ─────────────────────────────────── -->
 <section class="section screenshots-section" id="screenshots">
