@@ -229,8 +229,6 @@
       grid-template-columns: 280px 360px;
       gap: 36px;
       align-items: start;
-      justify-content: center;
-      margin: 0 auto;
     }
     .gallery-left {
       display: flex;
@@ -238,41 +236,71 @@
       gap: 20px;
     }
 
-    /* ── iPhone 17 Pro Max frame ── */
+    /* ── iPhone 17 Pro Max — gold titanium frame ── */
     .iphone-frame {
       position: relative;
       width: 280px;
-      background: linear-gradient(160deg, #3d3d3f 0%, #28282a 50%, #3a3a3c 100%);
-      border-radius: 54px;
-      padding: 13px 12px;
+      background: linear-gradient(
+        165deg,
+        #e8c96e 0%,
+        #c9a040 12%,
+        #8b6818 35%,
+        #b89030 55%,
+        #d4aa4e 75%,
+        #9a7820 100%
+      );
+      border-radius: 50px;
+      padding: 7px 5px 6px;
       box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.18),
-        inset 0 -1px 0 rgba(255,255,255,0.06),
-        0 0 0 1px rgba(0,0,0,0.6),
-        0 60px 120px rgba(0,0,0,0.85),
-        0 20px 60px rgba(0,0,0,0.45);
+        inset 0 1px 0 rgba(255, 220, 100, 0.5),
+        inset 0 -1px 0 rgba(0,0,0,0.3),
+        inset 1px 0 0 rgba(255,215,80,0.2),
+        inset -1px 0 0 rgba(0,0,0,0.25),
+        0 0 0 1px rgba(0,0,0,0.65),
+        0 80px 160px rgba(0,0,0,0.9),
+        0 30px 70px rgba(0,0,0,0.5),
+        0 8px 20px rgba(0,0,0,0.35);
       flex-shrink: 0;
     }
-    /* Volume buttons — left side */
-    .iphone-btn-vol {
+    /* Action button — left, near top */
+    .iphone-btn-action {
       position: absolute;
-      left: -4px;
-      top: 108px;
-      width: 4px;
-      height: 36px;
-      background: linear-gradient(to left, #2c2c2e, #3c3c3e);
-      border-radius: 3px 0 0 3px;
-      box-shadow: 0 52px 0 0 #3c3c3e; /* second volume button */
+      left: -3px;
+      top: 76px;
+      width: 3px;
+      height: 22px;
+      background: linear-gradient(to left, #8b6818, #c9a040);
+      border-radius: 2px 0 0 2px;
+    }
+    /* Volume up */
+    .iphone-btn-vol-up {
+      position: absolute;
+      left: -3px;
+      top: 116px;
+      width: 3px;
+      height: 52px;
+      background: linear-gradient(to left, #8b6818, #c9a040);
+      border-radius: 2px 0 0 2px;
+    }
+    /* Volume down */
+    .iphone-btn-vol-down {
+      position: absolute;
+      left: -3px;
+      top: 178px;
+      width: 3px;
+      height: 52px;
+      background: linear-gradient(to left, #8b6818, #c9a040);
+      border-radius: 2px 0 0 2px;
     }
     /* Power button — right side */
     .iphone-btn-power {
       position: absolute;
-      right: -4px;
-      top: 128px;
-      width: 4px;
-      height: 68px;
-      background: linear-gradient(to right, #2c2c2e, #3c3c3e);
-      border-radius: 0 3px 3px 0;
+      right: -3px;
+      top: 138px;
+      width: 3px;
+      height: 86px;
+      background: linear-gradient(to right, #8b6818, #c9a040);
+      border-radius: 0 2px 2px 0;
     }
     .iphone-screen {
       position: relative;
@@ -285,16 +313,16 @@
       transition: opacity .22s ease;
     }
     .iphone-screen img.swapping { opacity: 0; }
-    /* Dynamic Island overlay */
+    /* Dynamic Island */
     .iphone-island {
       position: absolute;
-      top: 11px;
+      top: 10px;
       left: 50%;
       transform: translateX(-50%);
-      width: 90px;
-      height: 32px;
+      width: 88px;
+      height: 30px;
       background: #000;
-      border-radius: 16px;
+      border-radius: 15px;
       pointer-events: none;
       z-index: 2;
     }
@@ -340,7 +368,7 @@
     }
     @media (max-width: 420px) {
       .iphone-frame { width: 240px; }
-      .gallery-thumbs { grid-template-columns: repeat(4, 1fr); }
+      .gallery-thumbs { grid-template-columns: repeat(3, 1fr); }
     }
 
     /* ─── STATS ───────────────────────────────────── */
@@ -665,7 +693,9 @@
       <!-- Left: iPhone frame + label -->
       <div class="gallery-left">
         <div class="iphone-frame">
-          <div class="iphone-btn-vol"></div>
+          <div class="iphone-btn-action"></div>
+          <div class="iphone-btn-vol-up"></div>
+          <div class="iphone-btn-vol-down"></div>
           <div class="iphone-btn-power"></div>
           <div class="iphone-screen">
             <img id="gallery-img" src="screenshots/home.jpg" alt="MajaSam home screen" loading="lazy">
