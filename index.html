@@ -226,9 +226,11 @@
     .screenshots-section { background: var(--surface); }
     .gallery-layout {
       display: grid;
-      grid-template-columns: 220px 1fr;
+      grid-template-columns: 220px 360px;
       gap: 32px;
       align-items: start;
+      justify-content: center;
+      margin: 0 auto;
     }
     .gallery-left {
       display: flex;
@@ -236,19 +238,19 @@
       gap: 18px;
     }
     .gallery-phone-frame {
+      width: 220px;
       border-radius: 44px;
       border: 2px solid rgba(255,255,255,0.14);
       overflow: hidden;
       background: #000;
       box-shadow: 0 40px 80px rgba(0,0,0,.75), 0 0 0 1px rgba(255,255,255,.05);
-      width: 100%;
     }
     .gallery-phone-frame img {
       width: 100%; height: auto; display: block;
       transition: opacity .22s ease;
     }
     .gallery-phone-frame img.swapping { opacity: 0; }
-    .gallery-meta { min-height: 52px; }
+    .gallery-meta { max-width: 220px; min-height: 52px; }
     .gallery-label {
       font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px;
     }
@@ -261,9 +263,10 @@
       gap: 10px;
       align-content: start;
       padding-top: 4px;
+      width: 360px;
     }
     .gallery-thumb {
-      border-radius: 16px;
+      border-radius: 14px;
       border: 2px solid transparent;
       overflow: hidden;
       background: #000;
@@ -274,18 +277,19 @@
     .gallery-thumb img { width: 100%; height: auto; display: block; }
     .gallery-thumb:hover { opacity: 0.7; }
     .gallery-thumb.active { border-color: var(--gold); opacity: 1; }
-    @media (max-width: 680px) {
+    @media (max-width: 660px) {
       .gallery-layout {
         grid-template-columns: 1fr;
         justify-items: center;
       }
-      .gallery-left { width: 220px; }
+      .gallery-phone-frame { width: 200px; }
+      .gallery-meta { max-width: 200px; }
       .gallery-thumbs {
-        grid-template-columns: repeat(4, 1fr);
         width: 100%;
+        grid-template-columns: repeat(4, 1fr);
       }
     }
-    @media (max-width: 420px) {
+    @media (max-width: 400px) {
       .gallery-thumbs { grid-template-columns: repeat(3, 1fr); }
     }
 
