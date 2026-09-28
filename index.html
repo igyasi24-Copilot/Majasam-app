@@ -5,7 +5,7 @@
   <link rel="canonical" href="https://majasam.com/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MajaSam — Track Every Purchase</title>
-  <meta name="description" content="MajaSam tracks every purchase, monitors return windows, and alerts you before warranties expire — so you never lose money on a missed deadline.">
+  <meta name="description" content="MajaSam tracks every purchase, monitors CPSC safety recalls, price drops, return windows, and warranties — so you never lose money or miss a safety alert.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800;900&display=swap">
@@ -23,6 +23,7 @@
       --sub:      #8B95AA;
       --sub2:     #4A5470;
       --green:    #34D399;
+      --red:      #FF4D4D;
       --radius:   16px;
     }
 
@@ -104,8 +105,8 @@
 
     .hero-pill {
       display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(245,166,35,0.10);
-      border: 1px solid rgba(245,166,35,0.25);
+      background: rgba(255,77,77,0.10);
+      border: 1px solid rgba(255,77,77,0.25);
       border-radius: 999px;
       padding: 6px 14px 6px 8px;
       margin-bottom: 32px;
@@ -113,7 +114,7 @@
       cursor: default;
     }
     .hero-pill-badge {
-      background: var(--gold); color: #080B18;
+      background: var(--red); color: #fff;
       font-size: 11px; font-weight: 800; letter-spacing: .4px;
       padding: 2px 8px; border-radius: 999px;
     }
@@ -132,61 +133,68 @@
     .hero-sub {
       font-size: clamp(15px, 2vw, 17px);
       color: var(--sub);
-      max-width: 560px;
+      max-width: 580px;
       margin: 0 auto 40px;
       line-height: 1.7;
     }
 
     .hero-badges {
-      display: flex; align-items: center; justify-content: center; gap: 12px;
-      flex-wrap: wrap; margin-bottom: 48px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      flex-wrap: wrap; margin-bottom: 56px;
     }
     .badge-pill {
       display: inline-flex; align-items: center; gap: 8px;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 10px 18px;
-      font-size: 13.5px; font-weight: 600; color: var(--sub);
+      padding: 9px 16px;
+      font-size: 13px; font-weight: 600; color: var(--sub);
     }
     .badge-pill svg { flex-shrink: 0; }
+    .badge-pill.urgent { border-color: rgba(255,77,77,0.3); color: #ff9090; }
 
-    .hero-app-preview {
-      max-width: 420px; margin: 0 auto;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 24px;
+    /* ─── PHONE FRAMES ────────────────────────────── */
+    .phones-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: nowrap;
+    }
+    .phone-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+    .phone-wrap.center { z-index: 2; }
+    .phone-wrap.side {
+      opacity: 0.72;
+      transform: scale(0.88) translateY(20px);
+    }
+    .phone-frame {
+      border-radius: 40px;
+      border: 2px solid rgba(255,255,255,0.12);
       overflow: hidden;
-      box-shadow: 0 32px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.04);
+      background: #000;
+      box-shadow: 0 40px 80px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.06);
     }
-    .preview-bar {
-      background: rgba(255,255,255,.04);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 18px;
-      display: flex; align-items: center; justify-content: space-between;
+    .phone-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
-    .preview-bar-title { font-size: 15px; font-weight: 700; }
-    .preview-bar-sub { font-size: 12px; color: var(--sub); }
-    .preview-row {
-      display: flex; align-items: center; gap: 12px;
-      padding: 13px 18px;
-      border-bottom: 1px solid rgba(255,255,255,.04);
+    .phone-wrap.center .phone-frame { width: 240px; }
+    .phone-wrap.side   .phone-frame { width: 200px; }
+    .phone-caption {
+      text-align: center;
+      font-size: 12px;
+      color: var(--sub);
+      margin-top: 14px;
+      font-weight: 500;
     }
-    .preview-icon {
-      width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 16px;
+    @media (max-width: 640px) {
+      .phone-wrap.side { display: none; }
+      .phone-wrap.center .phone-frame { width: 200px; }
     }
-    .preview-row-text { flex: 1; min-width: 0; }
-    .preview-row-name { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .preview-row-meta { font-size: 11.5px; color: var(--sub); }
-    .chip {
-      font-size: 10.5px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
-      white-space: nowrap; flex-shrink: 0;
-    }
-    .chip-amber { background: rgba(245,166,35,.15); color: var(--gold); }
-    .chip-green { background: rgba(52,211,153,.12); color: var(--green); }
-    .chip-grey  { background: rgba(255,255,255,.06); color: var(--sub); }
 
     /* ─── SECTION WRAPPER ─────────────────────────── */
     .section { padding: 80px 24px; }
@@ -223,14 +231,50 @@
       border-color: rgba(245,166,35,.3);
       transform: translateY(-2px);
     }
+    .feature-card.recall-card { border-color: rgba(255,77,77,0.2); }
+    .feature-card.recall-card:hover { border-color: rgba(255,77,77,0.45); }
     .feature-icon {
       width: 42px; height: 42px; border-radius: 12px;
       background: rgba(245,166,35,.1);
       display: flex; align-items: center; justify-content: center;
       font-size: 20px; margin-bottom: 16px;
     }
+    .feature-icon.red-icon { background: rgba(255,77,77,.12); }
     .feature-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
     .feature-card p  { font-size: 13.5px; color: var(--sub); line-height: 1.6; }
+
+    /* ─── SCREENSHOTS SHOWCASE ────────────────────── */
+    .screenshots-section { background: var(--surface); }
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      align-items: end;
+    }
+    .screenshot-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .screenshot-phone {
+      border-radius: 32px;
+      border: 2px solid rgba(255,255,255,0.1);
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 24px 60px rgba(0,0,0,.6);
+      width: 100%;
+      max-width: 220px;
+    }
+    .screenshot-phone img { width: 100%; height: auto; display: block; }
+    .screenshot-label {
+      font-size: 13px; font-weight: 700; color: var(--text); text-align: center;
+    }
+    .screenshot-desc { font-size: 12.5px; color: var(--sub); text-align: center; line-height: 1.5; }
+    @media (max-width: 700px) {
+      .screenshots-grid { grid-template-columns: 1fr; align-items: center; }
+      .screenshot-phone { max-width: 260px; }
+    }
 
     /* ─── STATS ───────────────────────────────────── */
     .stats-section { background: var(--surface); }
@@ -286,9 +330,10 @@
     .caps-preview-icon { font-size: 18px; flex-shrink: 0; }
     .caps-preview-label { font-size: 13px; font-weight: 600; flex: 1; }
     .caps-preview-status { font-size: 11.5px; font-weight: 600; }
-    .status-warn { color: var(--gold); }
-    .status-ok   { color: var(--green); }
-    .status-grey { color: var(--sub); }
+    .status-warn  { color: var(--gold); }
+    .status-ok    { color: var(--green); }
+    .status-grey  { color: var(--sub); }
+    .status-alert { color: var(--red); }
     @media (max-width: 700px) {
       .caps-grid { grid-template-columns: 1fr; }
     }
@@ -439,6 +484,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -458,74 +504,57 @@
   <div class="hero-inner">
     <div class="hero-pill">
       <span class="hero-pill-badge">NEW</span>
-      Family Vault — share your purchase tracker with family members
+      CPSC Safety Recall monitoring — automatic alerts for your purchases
     </div>
 
-    <h1>Track purchases, warranties,<br>and receipts in <span>one smart app.</span></h1>
+    <h1>Your purchases, protected.<br>Safety recalls, <span>caught automatically.</span></h1>
 
     <p class="hero-sub">
-      MajaSam monitors every return window, warranty, and subscription deadline — then alerts you before money walks out the door.
+      MajaSam monitors every return window, warranty, price drop, and CPSC safety recall — then alerts you before money walks out the door or something dangerous stays in your home.
     </p>
 
     <div class="hero-badges">
+      <div class="badge-pill urgent">
+        <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><path d="M8 2L2 13h12L8 2z" stroke="#FF4D4D" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 6v4M8 11.5v.5" stroke="#FF4D4D" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Safety recall alerts
+      </div>
       <div class="badge-pill">
         <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" stroke="#F5A623" stroke-width="1.5"/><path d="M8 4v4l2.5 2.5" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/></svg>
-        Return window alerts
+        Return window tracking
       </div>
       <div class="badge-pill">
         <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><path d="M2 8l4 4 8-8" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Warranty tracking
+        Warranty management
+      </div>
+      <div class="badge-pill">
+        <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><path d="M3 8h10M9 5l4 3-4 3" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Price drop alerts
       </div>
       <div class="badge-pill">
         <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><rect x="2" y="3" width="12" height="10" rx="2" stroke="#F5A623" stroke-width="1.5"/><path d="M5 7h6M5 10h4" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/></svg>
-        Gmail receipt import
-      </div>
-      <div class="badge-pill">
-        <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2" fill="#F5A623"/><path d="M8 2v2M8 12v2M2 8h2M12 8h2" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/></svg>
-        iOS — Coming Soon
+        Gmail auto-import
       </div>
     </div>
 
-    <!-- App UI preview -->
-    <div class="hero-app-preview">
-      <div class="preview-bar">
-        <div>
-          <div class="preview-bar-title">My Vault</div>
-          <div class="preview-bar-sub">4 items need attention</div>
+    <!-- Real app screenshots -->
+    <div class="phones-row reveal">
+      <div class="phone-wrap side">
+        <div class="phone-frame">
+          <img src="screenshots/action-center.jpg" alt="MajaSam Action Center showing 13 items needing attention" loading="lazy">
         </div>
-        <div style="font-size:11px;background:rgba(245,166,35,.12);color:var(--gold);padding:4px 10px;border-radius:8px;font-weight:700;">4 alerts</div>
+        <p class="phone-caption">Action Center</p>
       </div>
-      <div class="preview-row">
-        <div class="preview-icon" style="background:rgba(245,166,35,.1);">🎧</div>
-        <div class="preview-row-text">
-          <div class="preview-row-name">Sony WH-1000XM5</div>
-          <div class="preview-row-meta">Return window · 3 days left</div>
+      <div class="phone-wrap center">
+        <div class="phone-frame">
+          <img src="screenshots/home.jpg" alt="MajaSam home screen showing safety recall alerts and $22,866 protected" loading="eager">
         </div>
-        <span class="chip chip-amber">⚠ Urgent</span>
+        <p class="phone-caption">Home — Safety Recalls & Protection Score</p>
       </div>
-      <div class="preview-row">
-        <div class="preview-icon" style="background:rgba(52,211,153,.08);">💻</div>
-        <div class="preview-row-text">
-          <div class="preview-row-name">MacBook Pro 14"</div>
-          <div class="preview-row-meta">Warranty · 11 months left</div>
+      <div class="phone-wrap side">
+        <div class="phone-frame">
+          <img src="screenshots/widget.webp" alt="MajaSam home screen widget with Live Activity in Dynamic Island" loading="lazy">
         </div>
-        <span class="chip chip-green">✓ Active</span>
-      </div>
-      <div class="preview-row">
-        <div class="preview-icon" style="background:rgba(124,92,255,.1);">📺</div>
-        <div class="preview-row-text">
-          <div class="preview-row-name">Samsung 65" QLED</div>
-          <div class="preview-row-meta">Subscription · Renews Dec 1</div>
-        </div>
-        <span class="chip chip-grey">Upcoming</span>
-      </div>
-      <div class="preview-row" style="border-bottom:none;">
-        <div class="preview-icon" style="background:rgba(245,166,35,.1);">🛋️</div>
-        <div class="preview-row-text">
-          <div class="preview-row-name">IKEA SÖDERHAMN Sofa</div>
-          <div class="preview-row-meta">Return window · Expires today</div>
-        </div>
-        <span class="chip chip-amber">⚠ Today</span>
+        <p class="phone-caption">iOS Widget & Live Activity</p>
       </div>
     </div>
   </div>
@@ -536,35 +565,78 @@
   <div class="section-inner">
     <p class="eyebrow reveal">What's included</p>
     <h2 class="section-heading reveal">Everything you need to protect every purchase.</h2>
-    <p class="section-sub reveal">Track returns, warranties, and renewals in one place — with automatic alerts so nothing slips through.</p>
+    <p class="section-sub reveal">From safety recalls to price drops — MajaSam catches what you'd never think to check.</p>
 
     <div class="feature-grid">
+      <div class="feature-card recall-card reveal">
+        <div class="feature-icon red-icon">🚨</div>
+        <h3>Safety Recall Alerts</h3>
+        <p>Automatically checks every purchase against the CPSC database. If your product is recalled for a fire or safety hazard, you know immediately — with the full recall notice and what to do.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🏷️</div>
+        <h3>Price Match Tracking</h3>
+        <p>Detects when a retailer drops the price after your purchase. Surfaces the price match window and guides you through requesting a refund before the window closes.</p>
+      </div>
       <div class="feature-card reveal">
         <div class="feature-icon">⏱️</div>
         <h3>Return Window Tracking</h3>
-        <p>Never miss a return deadline. MajaSam counts down every window and alerts you 3 days before it closes.</p>
+        <p>Never miss a return deadline. MajaSam counts down every window and alerts you 3 days before it closes — with a Live Activity countdown on your lock screen.</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon">🛡️</div>
         <h3>Warranty Management</h3>
-        <p>Log warranty dates and get notified before coverage expires. Know exactly what's still protected.</p>
+        <p>Log warranty dates and get notified before coverage expires. Know exactly what's still protected and when to act.</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon">📧</div>
         <h3>Gmail Receipt Import</h3>
-        <p>Connect Gmail and MajaSam automatically scans your inbox for purchase receipts — no manual entry needed.</p>
+        <p>Connect Gmail and MajaSam automatically scans your inbox for purchase receipts — no manual entry needed. Receipts are read-only; no emails are stored or shared.</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon">👨‍👩‍👧</div>
         <h3>Family Vault</h3>
-        <p>Share a purchase vault with family members. Everyone's receipts, one shared view for the whole household.</p>
+        <p>Share a purchase vault with family members. Everyone's receipts, one shared view — so a recall on anyone's purchase alerts the whole household.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SCREENSHOTS ─────────────────────────────────── -->
+<section class="section screenshots-section" id="screenshots">
+  <div class="section-inner">
+    <p class="eyebrow reveal">See It In Action</p>
+    <h2 class="section-heading reveal">Real screenshots. Real protection.</h2>
+    <p class="section-sub reveal">Everything you see here is live in the app — no mockups.</p>
+
+    <div class="screenshots-grid">
+      <div class="screenshot-card reveal">
+        <div class="screenshot-phone">
+          <img src="screenshots/recalls.webp" alt="Product Recalls screen showing Casely Power Pod recall detail with CPSC hazard info" loading="lazy">
+        </div>
+        <div class="screenshot-label">CPSC Safety Recalls</div>
+        <div class="screenshot-desc">Full recall details, hazard description, and exactly what to do — matched to your specific purchase.</div>
+      </div>
+      <div class="screenshot-card reveal">
+        <div class="screenshot-phone">
+          <img src="screenshots/home.jpg" alt="Home screen showing $22,866 protected with safety recall alerts" loading="lazy">
+        </div>
+        <div class="screenshot-label">Home Dashboard</div>
+        <div class="screenshot-desc">Your total protection value, active recalls, and upcoming return windows — all in one view.</div>
+      </div>
+      <div class="screenshot-card reveal">
+        <div class="screenshot-phone">
+          <img src="screenshots/lock-screen.webp" alt="iOS 26 lock screen with MajaSam Live Activity countdown and widget" loading="lazy">
+        </div>
+        <div class="screenshot-label">Lock Screen & Live Activity</div>
+        <div class="screenshot-desc">Return window countdowns live on your lock screen. Never dig into the app to check a deadline.</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ── STATS ──────────────────────────────────────── -->
-<section class="section stats-section">
+<section class="section" style="background:var(--surface);">
   <div class="section-inner">
     <p class="eyebrow reveal" style="margin-bottom:32px;">By the numbers</p>
     <div class="stats-grid reveal">
@@ -574,9 +646,9 @@
         <div class="stat-desc">Core tracking is free with no expiry — upgrade when you need more.</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">3</div>
-        <div class="stat-label">Days Before Deadline</div>
-        <div class="stat-desc">Default alert window before return or warranty deadlines expire.</div>
+        <div class="stat-num">10K+</div>
+        <div class="stat-label">CPSC Recalls Tracked</div>
+        <div class="stat-desc">Live database of CPSC recalls cross-checked against your purchases automatically.</div>
       </div>
       <div class="stat-item">
         <div class="stat-num">∞</div>
@@ -598,65 +670,70 @@
     <div class="caps-grid">
       <div>
         <p class="eyebrow reveal">Current Capabilities</p>
-        <h2 class="section-heading reveal">Built around how people actually shop.</h2>
-        <p class="section-sub reveal" style="margin-bottom:32px;">Every feature in MajaSam exists because a real purchase deadline was missed.</p>
+        <h2 class="section-heading reveal">Built for iOS. Deeply integrated.</h2>
+        <p class="section-sub reveal" style="margin-bottom:32px;">MajaSam uses native iOS features so protection is always in view — even when the app isn't open.</p>
         <div class="cap-list">
           <div class="cap-item reveal">
             <div class="cap-dot"></div>
             <div>
-              <h4>Timeline tracking that stays readable</h4>
-              <p>Return windows, warranty expiry, and subscription renewals — visible at a glance from one timeline.</p>
+              <h4>Live Activity & Lock Screen widget</h4>
+              <p>Return window countdowns appear as a Live Activity on your lock screen and in the Dynamic Island — no need to unlock your phone.</p>
             </div>
           </div>
           <div class="cap-item reveal">
             <div class="cap-dot"></div>
             <div>
-              <h4>Smart alert filters</h4>
-              <p>Filter by urgent, due today, overdue, returns, warranty, and subscriptions to focus on what matters.</p>
+              <h4>Home Screen widget</h4>
+              <p>See how many items need attention and your total recoverable value at a glance, right on your home screen.</p>
             </div>
           </div>
           <div class="cap-item reveal">
             <div class="cap-dot"></div>
             <div>
-              <h4>Receipt photos and attachments</h4>
-              <p>Attach receipt photos or PDFs to every purchase — available when you need them for a return or claim.</p>
+              <h4>Siri Shortcuts</h4>
+              <p>Ask Siri to check your warranties, review return windows, or open the Action Center — hands-free.</p>
             </div>
           </div>
           <div class="cap-item reveal">
             <div class="cap-dot"></div>
             <div>
-              <h4>Native reminders + Pro workflows</h4>
-              <p>Schedule local notifications, unlock export, cloud backup, and per-kind reminder timing on Pro.</p>
+              <h4>Spotlight Search</h4>
+              <p>Search any purchase directly from Spotlight. Your entire vault is indexed and searchable system-wide.</p>
             </div>
           </div>
         </div>
       </div>
       <div class="caps-preview reveal">
-        <div style="font-size:12px;font-weight:700;color:var(--sub);letter-spacing:.6px;text-transform:uppercase;margin-bottom:8px;">Dashboard</div>
+        <div style="font-size:12px;font-weight:700;color:var(--sub);letter-spacing:.6px;text-transform:uppercase;margin-bottom:8px;">Live Status</div>
+        <div class="caps-preview-row">
+          <div class="caps-preview-icon">🚨</div>
+          <div class="caps-preview-label">Safety recalls</div>
+          <div class="caps-preview-status status-alert">2 critical</div>
+        </div>
         <div class="caps-preview-row">
           <div class="caps-preview-icon">⚠️</div>
           <div class="caps-preview-label">Return windows</div>
-          <div class="caps-preview-status status-warn">2 urgent</div>
+          <div class="caps-preview-status status-warn">3 urgent</div>
+        </div>
+        <div class="caps-preview-row">
+          <div class="caps-preview-icon">🏷️</div>
+          <div class="caps-preview-label">Price drop opportunities</div>
+          <div class="caps-preview-status status-warn">2 open</div>
         </div>
         <div class="caps-preview-row">
           <div class="caps-preview-icon">🛡️</div>
           <div class="caps-preview-label">Active warranties</div>
-          <div class="caps-preview-status status-ok">7 covered</div>
-        </div>
-        <div class="caps-preview-row">
-          <div class="caps-preview-icon">🔁</div>
-          <div class="caps-preview-label">Renewals this month</div>
-          <div class="caps-preview-status status-warn">3 due</div>
+          <div class="caps-preview-status status-ok">19 covered</div>
         </div>
         <div class="caps-preview-row">
           <div class="caps-preview-icon">📧</div>
           <div class="caps-preview-label">Gmail receipts imported</div>
-          <div class="caps-preview-status status-ok">12 new</div>
+          <div class="caps-preview-status status-ok">40 tracked</div>
         </div>
         <div class="caps-preview-row">
           <div class="caps-preview-icon">👨‍👩‍👧</div>
           <div class="caps-preview-label">Family vault members</div>
-          <div class="caps-preview-status status-grey">3 active</div>
+          <div class="caps-preview-status status-grey">2 active</div>
         </div>
       </div>
     </div>
@@ -668,7 +745,7 @@
   <div class="section-inner">
     <p class="eyebrow reveal">App Flow</p>
     <h2 class="section-heading reveal">How MajaSam works</h2>
-    <p class="section-sub reveal">Three steps from install to never missing a deadline again.</p>
+    <p class="section-sub reveal">Three steps from install to never missing a deadline — or a recall — again.</p>
     <div class="steps-grid">
       <div class="step-card reveal">
         <div class="step-num">Step 1</div>
@@ -678,12 +755,12 @@
       <div class="step-card reveal">
         <div class="step-num">Step 2</div>
         <h3>Add your purchases</h3>
-        <p>Log items manually or connect Gmail to auto-import receipts. Set return windows, warranty dates, and renewal dates.</p>
+        <p>Paste a product name or receipt — AI parses it instantly. Or connect Gmail to auto-import. MajaSam immediately checks every item against the CPSC recall database.</p>
       </div>
       <div class="step-card reveal">
         <div class="step-num">Step 3</div>
-        <h3>Stay ahead of deadlines</h3>
-        <p>MajaSam alerts you before windows close. Use dashboard filters, export reports, or share the vault with family.</p>
+        <h3>Stay protected automatically</h3>
+        <p>MajaSam alerts you before return windows close, prices drop, warranties lapse, or a product in your home gets recalled. It runs in the background so you don't have to.</p>
       </div>
     </div>
   </div>
@@ -694,7 +771,7 @@
   <div class="section-inner">
     <p class="eyebrow reveal">Pricing</p>
     <h2 class="section-heading reveal">Simple pricing that grows with you</h2>
-    <p class="section-sub reveal">Free covers everyday tracking. Pro unlocks unlimited items, Gmail import, family vault, and cloud backup.</p>
+    <p class="section-sub reveal">Free covers everyday tracking. Pro unlocks unlimited items, Gmail import, safety recalls, price match, family vault, and more.</p>
 
     <div class="pricing-grid">
       <div class="pricing-card reveal">
@@ -721,6 +798,8 @@
         <hr class="pricing-divider">
         <ul class="pricing-features">
           <li>Unlimited purchases &amp; attachments</li>
+          <li>CPSC safety recall monitoring</li>
+          <li>Price match &amp; price drop alerts</li>
           <li>Gmail receipt auto-import</li>
           <li>Family Vault sharing</li>
           <li>Cloud backup &amp; export</li>
@@ -739,6 +818,8 @@
         <ul class="pricing-features">
           <li>Everything in Monthly</li>
           <li>Unlimited purchases &amp; attachments</li>
+          <li>CPSC safety recall monitoring</li>
+          <li>Price match &amp; price drop alerts</li>
           <li>Gmail receipt auto-import</li>
           <li>Family Vault sharing</li>
           <li>Cloud backup &amp; export</li>
@@ -774,32 +855,38 @@
     <div class="faq-list" style="margin-top:40px;">
       <div class="faq-item reveal">
         <details>
-          <summary class="faq-q"><span class="faq-num">1</span> Is my data stored locally?</summary>
-          <p class="faq-a">Yes — your purchase data lives on your device first. Cloud backup (available on Pro) lets you optionally sync for peace of mind.</p>
+          <summary class="faq-q"><span class="faq-num">1</span> How do the safety recall alerts work?</summary>
+          <p class="faq-a">MajaSam checks every purchase you add against the live CPSC recall database (10,000+ records). When a match is found, you get a push notification with the full recall title, the specific hazard, and exactly what to do — including a direct link to the CPSC recall page. Checks run automatically in the background so you don't have to do anything.</p>
         </details>
       </div>
       <div class="faq-item reveal">
         <details>
-          <summary class="faq-q"><span class="faq-num">2</span> What does Pro unlock?</summary>
-          <p class="faq-a">Pro unlocks unlimited purchase tracking, Gmail receipt import, Family Vault sharing, cloud backup, CSV/PDF export, AI damage assessor, and per-item reminder preferences.</p>
+          <summary class="faq-q"><span class="faq-num">2</span> Is my data stored locally?</summary>
+          <p class="faq-a">Yes — your purchase data is stored on your device and optionally synced to your private account on Supabase (a secure cloud database). Your receipts are never sold or shared. Gmail scanning reads only receipt-pattern emails; no email content is stored on our servers.</p>
         </details>
       </div>
       <div class="faq-item reveal">
         <details>
-          <summary class="faq-q"><span class="faq-num">3</span> How does Gmail scanning work?</summary>
-          <p class="faq-a">MajaSam reads only emails that match receipt patterns — order confirmations and shipping notifications from retailers. No other emails are accessed or stored.</p>
+          <summary class="faq-q"><span class="faq-num">3</span> What does Pro unlock?</summary>
+          <p class="faq-a">Pro unlocks unlimited purchase tracking, CPSC safety recall monitoring, price match &amp; price drop alerts, Gmail receipt import, Family Vault sharing, cloud backup, CSV/PDF export, AI damage assessor, iOS widget, Live Activity, and per-item reminder preferences.</p>
         </details>
       </div>
       <div class="faq-item reveal">
         <details>
-          <summary class="faq-q"><span class="faq-num">4</span> What is the Family Vault?</summary>
-          <p class="faq-a">Family Vault lets one member create a shared vault. Other family members join with an invite code and their purchases become visible to all members.</p>
+          <summary class="faq-q"><span class="faq-num">4</span> How does Gmail scanning work?</summary>
+          <p class="faq-a">MajaSam reads only emails that match receipt patterns — order confirmations and shipping notifications from retailers. No other emails are accessed or stored. You can disconnect Gmail at any time from Settings.</p>
         </details>
       </div>
       <div class="faq-item reveal">
         <details>
-          <summary class="faq-q"><span class="faq-num">5</span> When is MajaSam launching?</summary>
-          <p class="faq-a">MajaSam is coming soon to the iOS App Store. Sign up below to be notified the moment it's available.</p>
+          <summary class="faq-q"><span class="faq-num">5</span> What is the Family Vault?</summary>
+          <p class="faq-a">Family Vault lets one member create a shared vault. Other family members join with an invite code and their purchases become visible to all members — including safety recall alerts across everyone's items.</p>
+        </details>
+      </div>
+      <div class="faq-item reveal">
+        <details>
+          <summary class="faq-q"><span class="faq-num">6</span> When is MajaSam launching?</summary>
+          <p class="faq-a">MajaSam is coming soon to the iOS App Store. The app is in final pre-launch testing. Follow along at majasam.com for the launch announcement.</p>
         </details>
       </div>
     </div>
@@ -814,12 +901,13 @@
         <div class="footer-logo-icon">🛍️</div>
         MajaSam
       </a>
-      <p class="footer-desc">Track purchases, warranties, and receipts — and never lose money on a missed deadline again.</p>
+      <p class="footer-desc">Track purchases, warranties, and safety recalls — and never lose money or miss a critical alert again.</p>
     </div>
     <div class="footer-col">
       <h4>Product</h4>
       <ul>
         <li><a href="#features">Features</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -848,4 +936,3 @@
 </script>
 </body>
 </html>
-
