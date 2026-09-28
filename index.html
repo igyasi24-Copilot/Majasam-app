@@ -224,35 +224,64 @@
 
     /* ─── SCREENSHOTS SHOWCASE ────────────────────── */
     .screenshots-section { background: var(--surface); }
-    .screenshots-grid {
+    .gallery-layout {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      align-items: end;
-    }
-    .screenshot-card {
-      display: flex;
-      flex-direction: column;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
       align-items: center;
-      gap: 16px;
     }
-    .screenshot-phone {
-      border-radius: 32px;
-      border: 2px solid rgba(255,255,255,0.1);
+    .gallery-phone-wrap {
+      position: relative;
+    }
+    .gallery-phone-frame {
+      border-radius: 44px;
+      border: 2px solid rgba(255,255,255,0.14);
       overflow: hidden;
       background: #000;
-      box-shadow: 0 24px 60px rgba(0,0,0,.6);
+      box-shadow: 0 40px 80px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.05);
       width: 100%;
-      max-width: 220px;
     }
-    .screenshot-phone img { width: 100%; height: auto; display: block; }
-    .screenshot-label {
-      font-size: 13px; font-weight: 700; color: var(--text); text-align: center;
+    .gallery-phone-frame img {
+      width: 100%; height: auto; display: block;
+      transition: opacity .18s ease;
     }
-    .screenshot-desc { font-size: 12.5px; color: var(--sub); text-align: center; line-height: 1.5; }
-    @media (max-width: 700px) {
-      .screenshots-grid { grid-template-columns: 1fr; align-items: center; }
-      .screenshot-phone { max-width: 260px; }
+    .gallery-phone-frame img.swapping { opacity: 0; }
+    .gallery-right { display: flex; flex-direction: column; gap: 12px; }
+    .gallery-active-label {
+      font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px;
+    }
+    .gallery-active-desc {
+      font-size: 13.5px; color: var(--sub); line-height: 1.6; margin-bottom: 20px;
+      min-height: 48px;
+    }
+    .gallery-thumbs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .gallery-thumb {
+      border-radius: 16px;
+      border: 2px solid transparent;
+      overflow: hidden;
+      background: #000;
+      cursor: pointer;
+      transition: border-color .15s, opacity .15s;
+      opacity: 0.55;
+    }
+    .gallery-thumb:hover { opacity: 0.8; }
+    .gallery-thumb.active {
+      border-color: var(--gold);
+      opacity: 1;
+    }
+    .gallery-thumb img { width: 100%; height: auto; display: block; }
+    @media (max-width: 800px) {
+      .gallery-layout { grid-template-columns: 1fr; }
+      .gallery-phone-wrap { display: flex; justify-content: center; }
+      .gallery-phone-frame { max-width: 240px; }
+      .gallery-thumbs { grid-template-columns: repeat(5, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .gallery-thumbs { grid-template-columns: repeat(3, 1fr); }
     }
 
     /* ─── STATS ───────────────────────────────────── */
@@ -573,27 +602,36 @@
     <h2 class="section-heading reveal">Real screenshots. Real protection.</h2>
     <p class="section-sub reveal">Everything you see here is live in the app — no mockups.</p>
 
-    <div class="screenshots-grid">
-      <div class="screenshot-card reveal">
-        <div class="screenshot-phone">
-          <img src="screenshots/recalls.webp" alt="Product Recalls screen showing Casely Power Pod recall detail with CPSC hazard info" loading="lazy">
+    <div class="gallery-layout reveal">
+      <!-- Big phone -->
+      <div class="gallery-phone-wrap">
+        <div class="gallery-phone-frame">
+          <img id="gallery-main" src="screenshots/home.jpg" alt="MajaSam home screen" loading="lazy">
         </div>
-        <div class="screenshot-label">CPSC Safety Recalls</div>
-        <div class="screenshot-desc">Full recall details, hazard description, and exactly what to do — matched to your specific purchase.</div>
       </div>
-      <div class="screenshot-card reveal">
-        <div class="screenshot-phone">
-          <img src="screenshots/home.jpg" alt="Home screen showing $22,866 protected with safety recall alerts" loading="lazy">
+
+      <!-- Right: label + description + thumbnails -->
+      <div class="gallery-right">
+        <div class="gallery-active-label" id="gallery-label">Home Dashboard</div>
+        <div class="gallery-active-desc" id="gallery-desc">Your total protection value, active safety recalls, and upcoming return windows — all in one view.</div>
+
+        <div class="gallery-thumbs">
+          <div class="gallery-thumb active" data-src="screenshots/home.jpg" data-label="Home Dashboard" data-desc="Your total protection value, active safety recalls, and upcoming return windows — all in one view.">
+            <img src="screenshots/home.jpg" alt="Home screen" loading="lazy">
+          </div>
+          <div class="gallery-thumb" data-src="screenshots/recalls.webp" data-label="CPSC Safety Recalls" data-desc="Full recall details, the exact hazard, and what to do — automatically matched to your specific purchase.">
+            <img src="screenshots/recalls.webp" alt="Product Recalls" loading="lazy">
+          </div>
+          <div class="gallery-thumb" data-src="screenshots/action-center.jpg" data-label="Action Center" data-desc="Every deadline, price drop, and warranty alert in one prioritized list. Nothing slips through.">
+            <img src="screenshots/action-center.jpg" alt="Action Center" loading="lazy">
+          </div>
+          <div class="gallery-thumb" data-src="screenshots/lock-screen.webp" data-label="Lock Screen & Live Activity" data-desc="Return window countdowns live on your lock screen in real time. No need to open the app.">
+            <img src="screenshots/lock-screen.webp" alt="Lock Screen Live Activity" loading="lazy">
+          </div>
+          <div class="gallery-thumb" data-src="screenshots/widget.webp" data-label="Home Screen Widget" data-desc="See your urgent items and recoverable value at a glance — plus Live Activity in the Dynamic Island.">
+            <img src="screenshots/widget.webp" alt="Home Screen Widget" loading="lazy">
+          </div>
         </div>
-        <div class="screenshot-label">Home Dashboard</div>
-        <div class="screenshot-desc">Your total protection value, active recalls, and upcoming return windows — all in one view.</div>
-      </div>
-      <div class="screenshot-card reveal">
-        <div class="screenshot-phone">
-          <img src="screenshots/lock-screen.webp" alt="iOS 26 lock screen with MajaSam Live Activity countdown and widget" loading="lazy">
-        </div>
-        <div class="screenshot-label">Lock Screen & Live Activity</div>
-        <div class="screenshot-desc">Return window countdowns live on your lock screen. Never dig into the app to check a deadline.</div>
       </div>
     </div>
   </div>
@@ -897,6 +935,26 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Screenshot gallery
+  const mainImg   = document.getElementById('gallery-main');
+  const mainLabel = document.getElementById('gallery-label');
+  const mainDesc  = document.getElementById('gallery-desc');
+  document.querySelectorAll('.gallery-thumb').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      if (thumb.classList.contains('active')) return;
+      document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+      mainImg.classList.add('swapping');
+      setTimeout(() => {
+        mainImg.src = thumb.dataset.src;
+        mainImg.alt = thumb.querySelector('img').alt;
+        mainLabel.textContent = thumb.dataset.label;
+        mainDesc.textContent  = thumb.dataset.desc;
+        mainImg.classList.remove('swapping');
+      }, 180);
+    });
+  });
 </script>
 </body>
 </html>
