@@ -153,47 +153,26 @@
     .badge-pill svg { flex-shrink: 0; }
     .badge-pill.urgent { border-color: rgba(255,77,77,0.3); color: #ff9090; }
 
-    /* ─── PHONE FRAMES ────────────────────────────── */
-    .phones-row {
+    /* ─── HERO PHONE ─────────────────────────────── */
+    .hero-phone {
       display: flex;
-      align-items: flex-end;
       justify-content: center;
-      gap: 20px;
-      flex-wrap: nowrap;
     }
-    .phone-wrap {
-      position: relative;
-      flex-shrink: 0;
-    }
-    .phone-wrap.center { z-index: 2; }
-    .phone-wrap.side {
-      opacity: 0.72;
-      transform: scale(0.88) translateY(20px);
-    }
-    .phone-frame {
-      border-radius: 40px;
-      border: 2px solid rgba(255,255,255,0.12);
+    .hero-phone-frame {
+      width: 260px;
+      border-radius: 44px;
+      border: 2px solid rgba(255,255,255,0.14);
       overflow: hidden;
       background: #000;
-      box-shadow: 0 40px 80px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.06);
+      box-shadow: 0 48px 96px rgba(0,0,0,.75), 0 0 0 1px rgba(255,255,255,.05);
     }
-    .phone-frame img {
+    .hero-phone-frame img {
       width: 100%;
       height: auto;
       display: block;
     }
-    .phone-wrap.center .phone-frame { width: 240px; }
-    .phone-wrap.side   .phone-frame { width: 200px; }
-    .phone-caption {
-      text-align: center;
-      font-size: 12px;
-      color: var(--sub);
-      margin-top: 14px;
-      font-weight: 500;
-    }
-    @media (max-width: 640px) {
-      .phone-wrap.side { display: none; }
-      .phone-wrap.center .phone-frame { width: 200px; }
+    @media (max-width: 480px) {
+      .hero-phone-frame { width: 220px; }
     }
 
     /* ─── SECTION WRAPPER ─────────────────────────── */
@@ -536,25 +515,10 @@
       </div>
     </div>
 
-    <!-- Real app screenshots -->
-    <div class="phones-row reveal">
-      <div class="phone-wrap side">
-        <div class="phone-frame">
-          <img src="screenshots/action-center.jpg" alt="MajaSam Action Center showing 13 items needing attention" loading="lazy">
-        </div>
-        <p class="phone-caption">Action Center</p>
-      </div>
-      <div class="phone-wrap center">
-        <div class="phone-frame">
-          <img src="screenshots/home.jpg" alt="MajaSam home screen showing safety recall alerts and $22,866 protected" loading="eager">
-        </div>
-        <p class="phone-caption">Home — Safety Recalls & Protection Score</p>
-      </div>
-      <div class="phone-wrap side">
-        <div class="phone-frame">
-          <img src="screenshots/widget.webp" alt="MajaSam home screen widget with Live Activity in Dynamic Island" loading="lazy">
-        </div>
-        <p class="phone-caption">iOS Widget & Live Activity</p>
+    <!-- Real app screenshot -->
+    <div class="hero-phone reveal">
+      <div class="hero-phone-frame">
+        <img src="screenshots/home.jpg" alt="MajaSam home screen showing two safety recall alerts and $22,866 protected" loading="eager">
       </div>
     </div>
   </div>
