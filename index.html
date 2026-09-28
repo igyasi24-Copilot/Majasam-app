@@ -226,8 +226,8 @@
     .screenshots-section { background: var(--surface); }
     .gallery-layout {
       display: grid;
-      grid-template-columns: 220px 360px;
-      gap: 32px;
+      grid-template-columns: 280px 360px;
+      gap: 36px;
       align-items: start;
       justify-content: center;
       margin: 0 auto;
@@ -235,22 +235,71 @@
     .gallery-left {
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 20px;
     }
-    .gallery-phone-frame {
-      width: 220px;
-      border-radius: 44px;
-      border: 2px solid rgba(255,255,255,0.14);
-      overflow: hidden;
+
+    /* ── iPhone 17 Pro Max frame ── */
+    .iphone-frame {
+      position: relative;
+      width: 280px;
+      background: linear-gradient(160deg, #3d3d3f 0%, #28282a 50%, #3a3a3c 100%);
+      border-radius: 54px;
+      padding: 13px 12px;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.18),
+        inset 0 -1px 0 rgba(255,255,255,0.06),
+        0 0 0 1px rgba(0,0,0,0.6),
+        0 60px 120px rgba(0,0,0,0.85),
+        0 20px 60px rgba(0,0,0,0.45);
+      flex-shrink: 0;
+    }
+    /* Volume buttons — left side */
+    .iphone-btn-vol {
+      position: absolute;
+      left: -4px;
+      top: 108px;
+      width: 4px;
+      height: 36px;
+      background: linear-gradient(to left, #2c2c2e, #3c3c3e);
+      border-radius: 3px 0 0 3px;
+      box-shadow: 0 52px 0 0 #3c3c3e; /* second volume button */
+    }
+    /* Power button — right side */
+    .iphone-btn-power {
+      position: absolute;
+      right: -4px;
+      top: 128px;
+      width: 4px;
+      height: 68px;
+      background: linear-gradient(to right, #2c2c2e, #3c3c3e);
+      border-radius: 0 3px 3px 0;
+    }
+    .iphone-screen {
+      position: relative;
       background: #000;
-      box-shadow: 0 40px 80px rgba(0,0,0,.75), 0 0 0 1px rgba(255,255,255,.05);
+      border-radius: 44px;
+      overflow: hidden;
     }
-    .gallery-phone-frame img {
+    .iphone-screen img {
       width: 100%; height: auto; display: block;
       transition: opacity .22s ease;
     }
-    .gallery-phone-frame img.swapping { opacity: 0; }
-    .gallery-meta { max-width: 220px; min-height: 52px; }
+    .iphone-screen img.swapping { opacity: 0; }
+    /* Dynamic Island overlay */
+    .iphone-island {
+      position: absolute;
+      top: 11px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 32px;
+      background: #000;
+      border-radius: 16px;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .gallery-meta { max-width: 280px; min-height: 52px; }
     .gallery-label {
       font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px;
     }
@@ -259,14 +308,14 @@
     }
     .gallery-thumbs {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 10px;
       align-content: start;
       padding-top: 4px;
       width: 360px;
     }
     .gallery-thumb {
-      border-radius: 14px;
+      border-radius: 12px;
       border: 2px solid transparent;
       overflow: hidden;
       background: #000;
@@ -277,20 +326,21 @@
     .gallery-thumb img { width: 100%; height: auto; display: block; }
     .gallery-thumb:hover { opacity: 0.7; }
     .gallery-thumb.active { border-color: var(--gold); opacity: 1; }
-    @media (max-width: 660px) {
+    @media (max-width: 720px) {
       .gallery-layout {
         grid-template-columns: 1fr;
         justify-items: center;
       }
-      .gallery-phone-frame { width: 200px; }
-      .gallery-meta { max-width: 200px; }
+      .gallery-meta { max-width: 260px; }
       .gallery-thumbs {
         width: 100%;
+        max-width: 400px;
         grid-template-columns: repeat(4, 1fr);
       }
     }
-    @media (max-width: 400px) {
-      .gallery-thumbs { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 420px) {
+      .iphone-frame { width: 240px; }
+      .gallery-thumbs { grid-template-columns: repeat(4, 1fr); }
     }
 
     /* ─── STATS ───────────────────────────────────── */
@@ -612,10 +662,15 @@
     <p class="section-sub reveal">Everything you see here is live in the app — no mockups.</p>
 
     <div class="gallery-layout reveal">
-      <!-- Left: big phone + label -->
+      <!-- Left: iPhone frame + label -->
       <div class="gallery-left">
-        <div class="gallery-phone-frame">
-          <img id="gallery-img" src="screenshots/home.jpg" alt="MajaSam home screen" loading="lazy">
+        <div class="iphone-frame">
+          <div class="iphone-btn-vol"></div>
+          <div class="iphone-btn-power"></div>
+          <div class="iphone-screen">
+            <img id="gallery-img" src="screenshots/home.jpg" alt="MajaSam home screen" loading="lazy">
+            <div class="iphone-island"></div>
+          </div>
         </div>
         <div class="gallery-meta">
           <div class="gallery-label" id="gallery-label">Home Dashboard</div>
