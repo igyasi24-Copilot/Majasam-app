@@ -224,64 +224,54 @@
 
     /* ─── SCREENSHOTS SHOWCASE ────────────────────── */
     .screenshots-section { background: var(--surface); }
-    .gallery-layout {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 48px;
+    .carousel-wrap {
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      gap: 32px;
     }
-    .gallery-phone-wrap {
-      position: relative;
-    }
-    .gallery-phone-frame {
+    .carousel-phone-frame {
+      width: 270px;
       border-radius: 44px;
       border: 2px solid rgba(255,255,255,0.14);
       overflow: hidden;
       background: #000;
-      box-shadow: 0 40px 80px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.05);
-      width: 100%;
+      box-shadow: 0 48px 96px rgba(0,0,0,.75), 0 0 0 1px rgba(255,255,255,.05);
+      flex-shrink: 0;
     }
-    .gallery-phone-frame img {
+    .carousel-phone-frame img {
       width: 100%; height: auto; display: block;
-      transition: opacity .18s ease;
+      transition: opacity .22s ease;
     }
-    .gallery-phone-frame img.swapping { opacity: 0; }
-    .gallery-right { display: flex; flex-direction: column; gap: 12px; }
-    .gallery-active-label {
-      font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px;
+    .carousel-phone-frame img.swapping { opacity: 0; }
+    .carousel-meta {
+      text-align: center;
+      min-height: 52px;
     }
-    .gallery-active-desc {
-      font-size: 13.5px; color: var(--sub); line-height: 1.6; margin-bottom: 20px;
-      min-height: 48px;
+    .carousel-label {
+      font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px;
     }
-    .gallery-thumbs {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+    .carousel-desc {
+      font-size: 13.5px; color: var(--sub); line-height: 1.6; max-width: 420px;
     }
-    .gallery-thumb {
-      border-radius: 16px;
-      border: 2px solid transparent;
-      overflow: hidden;
-      background: #000;
+    .carousel-dots {
+      display: flex; gap: 10px; align-items: center;
+    }
+    .carousel-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255,255,255,0.2);
       cursor: pointer;
-      transition: border-color .15s, opacity .15s;
-      opacity: 0.55;
+      border: none;
+      transition: background .2s, transform .2s;
+      padding: 0;
     }
-    .gallery-thumb:hover { opacity: 0.8; }
-    .gallery-thumb.active {
-      border-color: var(--gold);
-      opacity: 1;
+    .carousel-dot.active {
+      background: var(--gold);
+      transform: scale(1.3);
     }
-    .gallery-thumb img { width: 100%; height: auto; display: block; }
-    @media (max-width: 800px) {
-      .gallery-layout { grid-template-columns: 1fr; }
-      .gallery-phone-wrap { display: flex; justify-content: center; }
-      .gallery-phone-frame { max-width: 240px; }
-      .gallery-thumbs { grid-template-columns: repeat(5, 1fr); }
-    }
-    @media (max-width: 500px) {
-      .gallery-thumbs { grid-template-columns: repeat(3, 1fr); }
+    .carousel-dot:hover { background: rgba(255,255,255,0.45); }
+    @media (max-width: 480px) {
+      .carousel-phone-frame { width: 220px; }
     }
 
     /* ─── STATS ───────────────────────────────────── */
@@ -602,37 +592,15 @@
     <h2 class="section-heading reveal">Real screenshots. Real protection.</h2>
     <p class="section-sub reveal">Everything you see here is live in the app — no mockups.</p>
 
-    <div class="gallery-layout reveal">
-      <!-- Big phone -->
-      <div class="gallery-phone-wrap">
-        <div class="gallery-phone-frame">
-          <img id="gallery-main" src="screenshots/home.jpg" alt="MajaSam home screen" loading="lazy">
-        </div>
+    <div class="carousel-wrap reveal">
+      <div class="carousel-phone-frame">
+        <img id="carousel-img" src="screenshots/home.jpg" alt="MajaSam home screen" loading="lazy">
       </div>
-
-      <!-- Right: label + description + thumbnails -->
-      <div class="gallery-right">
-        <div class="gallery-active-label" id="gallery-label">Home Dashboard</div>
-        <div class="gallery-active-desc" id="gallery-desc">Your total protection value, active safety recalls, and upcoming return windows — all in one view.</div>
-
-        <div class="gallery-thumbs">
-          <div class="gallery-thumb active" data-src="screenshots/home.jpg" data-label="Home Dashboard" data-desc="Your total protection value, active safety recalls, and upcoming return windows — all in one view.">
-            <img src="screenshots/home.jpg" alt="Home screen" loading="lazy">
-          </div>
-          <div class="gallery-thumb" data-src="screenshots/recalls.webp" data-label="CPSC Safety Recalls" data-desc="Full recall details, the exact hazard, and what to do — automatically matched to your specific purchase.">
-            <img src="screenshots/recalls.webp" alt="Product Recalls" loading="lazy">
-          </div>
-          <div class="gallery-thumb" data-src="screenshots/action-center.jpg" data-label="Action Center" data-desc="Every deadline, price drop, and warranty alert in one prioritized list. Nothing slips through.">
-            <img src="screenshots/action-center.jpg" alt="Action Center" loading="lazy">
-          </div>
-          <div class="gallery-thumb" data-src="screenshots/lock-screen.webp" data-label="Lock Screen & Live Activity" data-desc="Return window countdowns live on your lock screen in real time. No need to open the app.">
-            <img src="screenshots/lock-screen.webp" alt="Lock Screen Live Activity" loading="lazy">
-          </div>
-          <div class="gallery-thumb" data-src="screenshots/widget.webp" data-label="Home Screen Widget" data-desc="See your urgent items and recoverable value at a glance — plus Live Activity in the Dynamic Island.">
-            <img src="screenshots/widget.webp" alt="Home Screen Widget" loading="lazy">
-          </div>
-        </div>
+      <div class="carousel-meta">
+        <div class="carousel-label" id="carousel-label">Home Dashboard</div>
+        <div class="carousel-desc" id="carousel-desc">Your total protection value, active safety recalls, and upcoming return windows — all in one view.</div>
       </div>
+      <div class="carousel-dots" id="carousel-dots"></div>
     </div>
   </div>
 </section>
@@ -936,25 +904,47 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-  // Screenshot gallery
-  const mainImg   = document.getElementById('gallery-main');
-  const mainLabel = document.getElementById('gallery-label');
-  const mainDesc  = document.getElementById('gallery-desc');
-  document.querySelectorAll('.gallery-thumb').forEach(thumb => {
-    thumb.addEventListener('click', () => {
-      if (thumb.classList.contains('active')) return;
-      document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
-      thumb.classList.add('active');
-      mainImg.classList.add('swapping');
-      setTimeout(() => {
-        mainImg.src = thumb.dataset.src;
-        mainImg.alt = thumb.querySelector('img').alt;
-        mainLabel.textContent = thumb.dataset.label;
-        mainDesc.textContent  = thumb.dataset.desc;
-        mainImg.classList.remove('swapping');
-      }, 180);
-    });
+  // Auto-advancing carousel
+  const slides = [
+    { src: 'screenshots/home.jpg',        alt: 'MajaSam home screen',          label: 'Home Dashboard',            desc: 'Your total protection value, active safety recalls, and upcoming return windows — all in one view.' },
+    { src: 'screenshots/recalls.webp',    alt: 'Product Recalls detail screen', label: 'CPSC Safety Recalls',       desc: 'Full recall details, the exact hazard, and what to do — automatically matched to your specific purchase.' },
+    { src: 'screenshots/action-center.jpg', alt: 'Action Center',               label: 'Action Center',             desc: 'Every deadline, price drop, and warranty alert in one prioritized list. Nothing slips through.' },
+    { src: 'screenshots/lock-screen.webp',  alt: 'Lock Screen Live Activity',  label: 'Lock Screen & Live Activity', desc: 'Return window countdowns live on your lock screen in real time. No need to open the app.' },
+    { src: 'screenshots/widget.webp',     alt: 'Home Screen Widget',            label: 'Home Screen Widget',        desc: 'See your urgent items and recoverable value at a glance — plus Live Activity in the Dynamic Island.' },
+  ];
+  const carImg   = document.getElementById('carousel-img');
+  const carLabel = document.getElementById('carousel-label');
+  const carDesc  = document.getElementById('carousel-desc');
+  const dotsWrap = document.getElementById('carousel-dots');
+  let current = 0, timer = null;
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+    d.addEventListener('click', () => { goTo(i); resetTimer(); });
+    dotsWrap.appendChild(d);
   });
+
+  function goTo(idx) {
+    if (idx === current) return;
+    current = idx;
+    carImg.classList.add('swapping');
+    setTimeout(() => {
+      const s = slides[current];
+      carImg.src = s.src;
+      carImg.alt = s.alt;
+      carLabel.textContent = s.label;
+      carDesc.textContent  = s.desc;
+      carImg.classList.remove('swapping');
+    }, 220);
+    dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function advance() { goTo((current + 1) % slides.length); }
+  function resetTimer() { clearInterval(timer); timer = setInterval(advance, 3500); }
+  resetTimer();
 </script>
 </body>
 </html>
