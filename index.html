@@ -227,7 +227,7 @@
     .gallery-layout {
       display: grid;
       grid-template-columns: 280px 360px;
-      gap: 36px;
+      gap: 56px;
       align-items: start;
     }
     .gallery-left {
@@ -336,7 +336,7 @@
     }
     .gallery-thumbs {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       align-content: start;
       padding-top: 4px;
@@ -354,7 +354,7 @@
     .gallery-thumb img { width: 100%; height: auto; display: block; }
     .gallery-thumb:hover { opacity: 0.7; }
     .gallery-thumb.active { border-color: var(--gold); opacity: 1; }
-    @media (max-width: 720px) {
+    @media (max-width: 760px) {
       .gallery-layout {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -362,8 +362,8 @@
       .gallery-meta { max-width: 260px; }
       .gallery-thumbs {
         width: 100%;
-        max-width: 400px;
-        grid-template-columns: repeat(4, 1fr);
+        max-width: 380px;
+        grid-template-columns: repeat(3, 1fr);
       }
     }
     @media (max-width: 420px) {
@@ -1021,6 +1021,8 @@
     { src: 'screenshots/widget.webp',          alt: 'Home Screen Widget',                 label: 'Home Screen Widget',          desc: 'See your urgent items and recoverable value at a glance — plus Live Activity in the Dynamic Island.' },
     { src: 'screenshots/my-purchases.jpg',     alt: 'My Purchases list',                  label: 'My Purchases',                desc: 'Every purchase in one place — searchable, filterable, and color-coded by warranty status and return window.' },
     { src: 'screenshots/protection-score.jpg', alt: 'Item detail with Protection Score',  label: 'Protection Score',            desc: 'Each item gets a score based on warranty coverage, return window, documentation quality, and claim history.' },
+    { src: 'screenshots/family-vault.webp',    alt: 'Family Vault shared purchases',      label: 'Family Vault',                desc: 'Share a vault with family members and see everyone\'s purchases, return windows, and recall alerts in one place.' },
+    { src: 'screenshots/quick-add.jpg',        alt: 'Quick Add — type your purchase',     label: 'Quick Add',                   desc: 'Just type your purchase in plain English — or paste an order confirmation. MajaSam fills in the rest.' },
   ];
   const galleryImg   = document.getElementById('gallery-img');
   const galleryLabel = document.getElementById('gallery-label');
