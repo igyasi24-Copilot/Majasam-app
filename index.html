@@ -226,22 +226,21 @@
     .screenshots-section { background: var(--surface); }
     .gallery-layout {
       display: grid;
-      grid-template-columns: 260px 88px;
-      gap: 28px;
-      justify-content: center;
+      grid-template-columns: 220px 1fr;
+      gap: 32px;
       align-items: start;
     }
     .gallery-left {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 18px;
     }
     .gallery-phone-frame {
       border-radius: 44px;
       border: 2px solid rgba(255,255,255,0.14);
       overflow: hidden;
       background: #000;
-      box-shadow: 0 48px 96px rgba(0,0,0,.75), 0 0 0 1px rgba(255,255,255,.05);
+      box-shadow: 0 40px 80px rgba(0,0,0,.75), 0 0 0 1px rgba(255,255,255,.05);
       width: 100%;
     }
     .gallery-phone-frame img {
@@ -257,40 +256,37 @@
       font-size: 13px; color: var(--sub); line-height: 1.6;
     }
     .gallery-thumbs {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      align-content: start;
       padding-top: 4px;
     }
     .gallery-thumb {
-      width: 88px;
-      border-radius: 14px;
+      border-radius: 16px;
       border: 2px solid transparent;
       overflow: hidden;
       background: #000;
       cursor: pointer;
       opacity: 0.45;
       transition: border-color .15s, opacity .15s;
-      flex-shrink: 0;
     }
     .gallery-thumb img { width: 100%; height: auto; display: block; }
     .gallery-thumb:hover { opacity: 0.7; }
     .gallery-thumb.active { border-color: var(--gold); opacity: 1; }
-    @media (max-width: 600px) {
+    @media (max-width: 680px) {
       .gallery-layout {
         grid-template-columns: 1fr;
         justify-items: center;
       }
-      .gallery-left { width: 240px; }
+      .gallery-left { width: 220px; }
       .gallery-thumbs {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow-x: auto;
+        grid-template-columns: repeat(4, 1fr);
         width: 100%;
-        justify-content: flex-start;
-        padding-bottom: 4px;
       }
-      .gallery-thumb { width: 64px; flex-shrink: 0; }
+    }
+    @media (max-width: 420px) {
+      .gallery-thumbs { grid-template-columns: repeat(3, 1fr); }
     }
 
     /* ─── STATS ───────────────────────────────────── */
