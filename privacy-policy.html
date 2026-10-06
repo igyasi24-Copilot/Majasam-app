@@ -17,62 +17,103 @@
 </head>
 <body>
   <h1>MajaSam Privacy Policy</h1>
-  <p>Last updated: September 22, 2026</p>
+  <p>Last updated: October 6, 2026</p>
 
   <h2>Overview</h2>
-  <p>MajaSam is an iOS app that helps users track purchases, monitor return windows and warranties, and scan Gmail for receipts. We are committed to protecting your privacy and handling your data responsibly.</p>
+  <p>MajaSam is an iOS app that helps you track purchases, monitor return windows and warranties, and, if you choose, scan Gmail for receipts. This policy explains what we collect, why, who processes it, how long we keep it, and the choices you have. We do not sell your data and we do not show ads.</p>
+
+  <h2>Information We Collect</h2>
+  <ul>
+    <li><strong>Account information:</strong> your email address, your name, and your password. Passwords are stored only as salted hashes by our sign-in provider; we never see or store your password.</li>
+    <li><strong>Purchase information you add or import:</strong> product names, prices, stores, dates, warranty and return details, notes, receipt photos, warranty and loss documents, and claims you create.</li>
+    <li><strong>Gmail receipts (optional):</strong> see "Gmail Data" below.</li>
+    <li><strong>Subscription status:</strong> whether you have a plan. Payments are handled by Apple; we never receive your card details.</li>
+    <li><strong>Notification token:</strong> a device token used to send reminders and recall alerts you turn on.</li>
+    <li><strong>Technical and crash information:</strong> app version, device type, and error reports that help us fix problems.</li>
+    <li><strong>Voice questions (optional):</strong> if you use the microphone button in the Purchase Assistant, your speech is converted to text by Apple's speech recognition on your device or by Apple. We receive only the resulting text, not the audio.</li>
+  </ul>
 
   <h2>Gmail Data</h2>
   <p>MajaSam requests read-only access to your Gmail account (<code>gmail.readonly</code> scope). This access is used solely to:</p>
   <ul>
-    <li>Scan your inbox for purchase receipts and subscription confirmations</li>
+    <li>Scan your inbox for purchase receipts and subscription confirmations. Only messages that match receipt-style subjects or senders are read, including receipt PDF attachments.</li>
     <li>Extract product name, price, store name, and purchase date from receipt emails</li>
     <li>Populate your personal purchase vault within the app</li>
   </ul>
-  <p>MajaSam does not store your emails. Email content is sent to our server only for AI-based receipt extraction and is not retained after processing. We do not read, store, or share emails unrelated to purchases. Gmail OAuth tokens are stored securely on your device only.</p>
-  <p>You can disconnect Gmail at any time from Settings inside the MajaSam app. This revokes all Gmail access immediately.</p>
+  <p>MajaSam does not store your emails. The text of a receipt email is sent to our server only for AI-based receipt extraction and is not retained after processing. We do not read, store, or share emails unrelated to purchase receipts. Only the purchase details you choose to save are kept in your vault.</p>
+  <p>Your Gmail access tokens are stored only on your device, in secure storage, and are never sent to or stored on our servers.</p>
+  <p>Because Gmail holds sensitive information, we require two-step sign-in on your MajaSam account before Gmail can be connected or scanned.</p>
+  <p>You can disconnect Gmail at any time from Settings inside the MajaSam app. This revokes all Gmail access immediately. Signing out also revokes it.</p>
 
-  <h2>Data We Collect</h2>
+  <h2>How We Use Your Information</h2>
   <ul>
-    <li>Purchase information extracted from receipts (product name, price, store, date)</li>
-    <li>Gmail OAuth tokens — stored securely on your device, never on our servers</li>
-    <li>Account information (email address) used only for authentication via Supabase</li>
+    <li>To provide the app: store and sync your purchases across your devices, track return windows and warranties, and help you file claims.</li>
+    <li>To extract details from receipts and answer your questions with the AI features you use.</li>
+    <li>To send reminders and alerts you turn on, including recall alerts when a product in your vault matches a public recall notice.</li>
+    <li>To keep the service secure, prevent abuse, and respond to support requests.</li>
   </ul>
 
-  <h2>Data Protection</h2>
-  <p>We protect your data using the following mechanisms:</p>
+  <h2>Services That Process Your Data</h2>
+  <p>We use the following providers to run MajaSam. They process data only to provide their service to us.</p>
   <ul>
-    <li><strong>Encryption in transit:</strong> All data transmitted between the app and our servers is encrypted using TLS/HTTPS.</li>
-    <li><strong>Encryption at rest:</strong> User data stored in our database (Supabase) is encrypted at rest.</li>
-    <li><strong>Minimal data retention:</strong> Email content is processed in memory and never written to disk or stored after extraction is complete.</li>
-    <li><strong>Access controls:</strong> API endpoints are protected with authentication keys. Only your own purchases are accessible to your account.</li>
-    <li><strong>OAuth token security:</strong> Gmail OAuth tokens are stored locally on your device using secure storage and are never transmitted to or stored on our servers.</li>
+    <li><strong>Supabase:</strong> sign-in, our database, and file storage. Your data is hosted in the United States.</li>
+    <li><strong>Render:</strong> hosts the server that relays your requests to the services below.</li>
+    <li><strong>OpenAI:</strong> AI processing (see below).</li>
+    <li><strong>Apple:</strong> in-app purchases and, if you use it, speech recognition and Sign in with Apple.</li>
+    <li><strong>RevenueCat:</strong> manages subscription status. It receives an account identifier (not your email address) and your purchase status.</li>
+    <li><strong>Expo:</strong> delivers push notifications and app updates.</li>
+    <li><strong>Resend:</strong> sends account emails such as password reset codes.</li>
+    <li><strong>Sentry:</strong> receives crash and error reports.</li>
+    <li><strong>SerpAPI:</strong> price and product-image lookups use a product name and store, with no account information. Barcode scans are looked up in public product databases (Open Food Facts, UPCItemDB). Recall checks use public U.S. government recall data.</li>
   </ul>
 
   <h2>Third-Party AI Services</h2>
-  <p>MajaSam uses OpenAI's API (GPT-4o-mini) to extract purchase details from receipt text. When you use Gmail scanning or Quick Add, relevant text is sent to OpenAI for processing.</p>
-  <p>OpenAI's API terms of service state that data submitted via the API is not used to train their models. You can review OpenAI's data usage policy at <a href="https://openai.com/policies/api-data-usage-policies" target="_blank">openai.com/policies/api-data-usage-policies</a>.</p>
-  <p>We do not use any other third-party AI services, aggregators, model gateways, or model hubs.</p>
+  <p>MajaSam uses OpenAI's API for AI features: reading receipts, checking coverage, assessing damage, drafting claims and disputes, and answering questions about a purchase in the Purchase Assistant. When you use one of these features, the relevant text, receipt image, or question is sent to OpenAI for processing, and the result is shown to you.</p>
+  <p>OpenAI's API terms state that data submitted via the API is not used to train their models by default. You can review OpenAI's policies at <a href="https://openai.com/policies/api-data-usage-policies" target="_blank">openai.com/policies/api-data-usage-policies</a>.</p>
+  <p>Recall alerts also use OpenAI in the background: from time to time our server compares the product names in your vault with public recall notices and sends you an alert if one matches. Only product names are sent for this. We do not use any other AI service for processing your content.</p>
 
   <h2>Google API Limited Use Compliance</h2>
   <div class="compliance-box">
-    <p>MajaSam's use of information received from Google APIs, including Gmail data, adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements. Gmail data accessed through Google APIs is used only to provide the receipt-scanning feature within MajaSam and is not transferred to, or used to train, any AI or machine learning model — including OpenAI's models. Raw or derived Google user data is never sold, shared with third parties, or used for advertising purposes.</p>
+    <p>MajaSam's use of information received from Google APIs, including Gmail data, adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements. Gmail data accessed through Google APIs is used only to provide the receipt-scanning feature within MajaSam. The text of receipt emails is sent to OpenAI's API only to extract purchase details for you; it is not used to develop, improve, or train any AI or machine learning model, ours or OpenAI's. Raw or derived Google user data is never sold, never used for advertising, and never shared with third parties other than as described here. No person at MajaSam reads your email content except with your consent, to investigate abuse or a security issue, or to comply with the law.</p>
   </div>
 
-  <h2>Data Sharing</h2>
-  <p>We do not sell your data. We do not share your personal data with third parties except as described above (OpenAI for receipt text extraction) and as required by law.</p>
+  <h2>Data Protection</h2>
+  <ul>
+    <li><strong>Encryption in transit:</strong> all data sent between the app and our servers uses TLS/HTTPS.</li>
+    <li><strong>Encryption at rest:</strong> data in our database and file storage (Supabase) is encrypted at rest with AES-256. Records saved on your phone are encrypted with AES-256-GCM, with the key kept in the iOS Keychain.</li>
+    <li><strong>Access controls:</strong> every request to our server needs your signed-in session. You can reach only your own data, plus purchases that a family vault member has chosen to share with you. Receipt and document files are private and are opened through short-lived links.</li>
+    <li><strong>Two-step sign-in:</strong> available for every account, with recovery codes in case you lose your phone.</li>
+    <li><strong>Minimal retention of email:</strong> email content is processed in memory and not stored after extraction.</li>
+  </ul>
 
-  <h2>Data Retention</h2>
-  <p>Purchase data you add to your vault is retained until you delete it or close your account. You can delete your account at any time from Settings → Delete Account, which permanently removes all your data from our servers.</p>
+  <h2>Sharing</h2>
+  <p>We do not sell your data. We share it only with the providers listed above to run the app, with family vault members you approve (only the purchases you choose to share), and when required by law or to protect safety and security.</p>
+
+  <h2>Family Vault</h2>
+  <p>If you create or join a family vault, the owner approves who joins. Members can see the purchases you choose to share, and you can hide details such as price for each shared item. Members can leave a vault at any time.</p>
+
+  <h2>Data Retention and Deletion</h2>
+  <p>Your purchases, claims, and files are kept until you delete them or delete your account. When you choose Delete Account in the app, we remove your purchases, claims, family memberships, notification tokens, and uploaded receipts and documents, and then delete your sign-in account. Copies in database backups are removed as the backups expire, within 30 days. Error reports and server logs are kept by our providers for a limited time and do not contain your receipts or passwords.</p>
+
+  <h2>Your Choices and Rights</h2>
+  <ul>
+    <li>Edit or delete any purchase, claim, or document in the app.</li>
+    <li>Download a copy of your data from More, Download My Data.</li>
+    <li>Delete your account from More, Delete Account. This cannot be undone.</li>
+    <li>Disconnect Gmail, or turn off AI features, at any time.</li>
+    <li>If you live where privacy laws such as the GDPR or the California Consumer Privacy Act apply, you may have additional rights, including access, correction, deletion, and portability. Email us and we will respond.</li>
+  </ul>
+
+  <h2>Where Your Data Is Processed</h2>
+  <p>Our database is in the United States, and our providers may process data in the United States and other countries. By using MajaSam you understand your information may be processed there.</p>
 
   <h2>Children's Privacy</h2>
   <p>MajaSam is not directed at children under 13. We do not knowingly collect personal information from children.</p>
 
   <h2>Changes to This Policy</h2>
-  <p>We may update this policy from time to time. We will notify users of significant changes through the app.</p>
+  <p>We may update this policy from time to time. We will notify users of significant changes through the app and update the date above.</p>
 
   <h2>Contact</h2>
-  <p>If you have questions about this privacy policy, contact us at <a href="mailto:igyasi24@gmail.com">igyasi24@gmail.com</a>.</p>
+  <p>If you have questions about this privacy policy or want to use your rights, contact us at <a href="mailto:support@majasam.com">support@majasam.com</a>.</p>
 </body>
 </html>
-
