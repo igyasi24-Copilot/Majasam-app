@@ -286,7 +286,7 @@
     .screenshots-section { background: var(--surface); }
     .gallery-layout {
       display: grid;
-      grid-template-columns: 280px 360px;
+      grid-template-columns: 280px 520px;
       gap: 56px;
       align-items: start;
     }
@@ -396,14 +396,14 @@
     }
     .gallery-thumbs {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
       align-content: start;
       padding-top: 4px;
-      width: 360px;
+      width: 520px;
     }
     .gallery-thumb {
-      border-radius: 12px;
+      border-radius: 8px;
       border: 2px solid transparent;
       overflow: hidden;
       background: #000;
@@ -423,12 +423,13 @@
       .gallery-thumbs {
         width: 100%;
         max-width: 380px;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        gap: 6px;
       }
     }
     @media (max-width: 420px) {
       .iphone-frame { width: 240px; }
-      .gallery-thumbs { grid-template-columns: repeat(3, 1fr); }
+      .gallery-thumbs { grid-template-columns: repeat(6, 1fr); }
     }
 
     /* ─── STATS ───────────────────────────────────── */
@@ -788,7 +789,7 @@
     <!-- Real app screenshot -->
     <div class="hero-phone reveal">
       <div class="hero-phone-frame">
-        <img src="screenshots/home.jpg" alt="MajaSam home screen showing two safety recall alerts and $22,866 protected" loading="eager">
+        <img src="screenshots/home.jpg" alt="MajaSam home screen showing two safety recall alerts and $27,441 protected" loading="eager">
       </div>
     </div>
   </div>
@@ -1286,15 +1287,18 @@
 
   // Screenshot gallery — big phone left, thumbnail strip right, auto-advances
   const slides = [
-    { src: 'screenshots/home.jpg',             alt: 'MajaSam home screen',               label: 'Home Dashboard',              desc: 'Your total protection value, active safety recalls, and upcoming return windows — all in one view.' },
-    { src: 'screenshots/recalls.webp',         alt: 'Product Recalls detail screen',      label: 'CPSC Safety Recalls',         desc: 'Full recall details, the exact hazard, and what to do — automatically matched to your specific purchase.' },
-    { src: 'screenshots/action-center.jpg',    alt: 'Action Center',                      label: 'Action Center',               desc: 'Every deadline, price drop, and warranty alert in one prioritized list. Nothing slips through.' },
-    { src: 'screenshots/lock-screen.webp',     alt: 'Lock Screen Live Activity',          label: 'Lock Screen & Live Activity', desc: 'Return window countdowns live on your lock screen in real time. No need to open the app.' },
-    { src: 'screenshots/widget.webp',          alt: 'Home Screen Widget',                 label: 'Home Screen Widget',          desc: 'See your urgent items and recoverable value at a glance — plus Live Activity in the Dynamic Island.' },
-    { src: 'screenshots/my-purchases.jpg',     alt: 'My Purchases list',                  label: 'My Purchases',                desc: 'Every purchase in one place — searchable, filterable, and color-coded by warranty status and return window.' },
-    { src: 'screenshots/protection-score.jpg', alt: 'Item detail with Protection Score',  label: 'Protection Score',            desc: 'Each item gets a score based on warranty coverage, return window, documentation quality, and claim history.' },
-    { src: 'screenshots/family-vault.webp',    alt: 'Family Vault shared purchases',      label: 'Family Vault',                desc: 'Share a vault with family members and see everyone\'s purchases, return windows, and recall alerts in one place.' },
-    { src: 'screenshots/quick-add.jpg',        alt: 'Quick Add — type your purchase',     label: 'Quick Add',                   desc: 'Just type your purchase in plain English — or paste an order confirmation. MajaSam fills in the rest.' },
+    { src: 'screenshots/home.jpg',                  alt: 'MajaSam home screen',               label: 'Home Dashboard',              desc: 'Your total protection value, active safety recalls, and upcoming return windows — all in one view.' },
+    { src: 'screenshots/check-before-you-buy.jpg',  alt: 'Check before you buy',               label: 'Check Before You Buy',        desc: 'Standing in a store? Scan the box or barcode and see safety recalls, the return window, price match and the lowest online price before you pay. Premium.' },
+    { src: 'screenshots/point-and-know.jpg',        alt: 'Point and Know',                     label: 'Point and Know',              desc: 'Aim your camera at a product and see its warranty status and any safety recalls. It reads the label on your phone, so the camera view is not uploaded.' },
+    { src: 'screenshots/action-center.jpg',         alt: 'Action Center',                      label: 'Action Center',               desc: 'Every deadline, price drop, and warranty alert in one prioritized list. Nothing slips through.' },
+    { src: 'screenshots/recalls.webp',              alt: 'Product Recalls detail screen',      label: 'CPSC Safety Recalls',         desc: 'Full recall details, the exact hazard, and what to do — automatically matched to your specific purchase.' },
+    { src: 'screenshots/lock-screen.jpg',           alt: 'Lock Screen Live Activities',        label: 'Lock Screen & Live Activity', desc: 'Return window countdowns and safety recalls live on your lock screen. Tap one to open that purchase.' },
+    { src: 'screenshots/widget.jpg',                alt: 'Home Screen Widget',                 label: 'Home Screen Widget',          desc: 'See your urgent items and recoverable value at a glance, right on your Home Screen.' },
+    { src: 'screenshots/home-inventory.jpg',        alt: 'Home Inventory PDF',                 label: 'Home Inventory PDF',          desc: 'One tap builds a PDF of everything you own: photos, serial numbers, what you paid and totals by category. Ready to hand to your insurer.' },
+    { src: 'screenshots/currency-conversions.jpg',  alt: 'Currency conversions',               label: 'Currency Conversions',        desc: 'Buy in any currency. MajaSam converts at the rate on the day you bought it, so your totals stay honest.' },
+    { src: 'screenshots/gmail-receipts.jpg',        alt: 'Gmail receipt scan',                 label: 'Find Receipts in Gmail',      desc: 'Optional, read-only. MajaSam finds receipt emails and adds them as purchases for you to confirm.' },
+    { src: 'screenshots/family-vault.jpg',         alt: 'Family Vault shared purchases',      label: 'Family Vault',                desc: 'Share a vault with your family. You approve who joins, then see everyone\'s purchases, return deadlines, and recalls in one place.' },
+    { src: 'screenshots/protection-score.jpg',      alt: 'Item detail with Protection Score',  label: 'Protection Score',            desc: 'Each item gets a score based on warranty coverage, return window, documentation quality, and claim history.' },
   ];
   const galleryImg   = document.getElementById('gallery-img');
   const galleryLabel = document.getElementById('gallery-label');
