@@ -199,7 +199,7 @@
         "amazon"
       ],
       "windowDays": 30,
-      "howToClaim": "Contact Amazon customer service via chat or call 1-800-275-2273. Reference your order number.",
+      "howToClaim": "Contact Amazon customer service via chat or call 1-888-280-4331. Reference your order number.",
       "conditions": "Applies to items sold and shipped by Amazon (not third-party sellers). Excludes Lightning Deals.",
       "contacts": [
         {
@@ -208,7 +208,7 @@
         },
         {
           "label": "Phone",
-          "value": "1-800-275-2273"
+          "value": "1-888-280-4331"
         }
       ],
       "returnPortalUrl": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7",
