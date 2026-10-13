@@ -17,7 +17,7 @@
 </head>
 <body>
   <h1>MajaSam Privacy Policy</h1>
-  <p>Last updated: October 11, 2026</p>
+  <p>Last updated: October 13, 2026</p>
 
   <h2>Overview</h2>
   <p>MajaSam is an iOS app that helps you track purchases, monitor return windows and warranties, and, if you choose, scan Gmail for receipts. This policy explains what we collect, why, who processes it, how long we keep it, and the choices you have. We do not sell your data and we do not show ads.</p>
@@ -28,7 +28,8 @@
     <li><strong>Purchase information you add or import:</strong> product names, prices, stores, dates, warranty and return details, notes, receipt photos, warranty and loss documents, and claims you create (stored in your account only if you turn on cloud backup).</li>
     <li><strong>Gmail receipts (optional):</strong> see "Gmail Data" below.</li>
     <li><strong>Subscription status:</strong> whether you have a plan. Payments are handled by Apple; we never receive your card details.</li>
-    <li><strong>Notification token:</strong> a device token used to send reminders and recall alerts you turn on.</li>
+    <li><strong>Notification token:</strong> a device token used to send reminders and recall alerts you turn on, and family questions and answers. A token belongs to the phone and to the account signed in on it. Signing in on a phone as someone else, or signing out, removes the earlier account's link to that phone.</li>
+    <li><strong>Family questions and answers (optional):</strong> if you use "Ask family", see "Family Vault" below.</li>
     <li><strong>Technical and crash information:</strong> app version, device type, and error reports that help us fix problems.</li>
     <li><strong>Voice questions (optional):</strong> if you use the microphone button in the Purchase Assistant, your speech is converted to text by Apple's speech recognition on your device or by Apple. We receive only the resulting text, not the audio.</li>
   </ul>
@@ -62,6 +63,7 @@
     <li><strong>Find Receipts in Photos:</strong> if you use it, MajaSam reads your most recent photos on your phone to find pictures of receipts, using Apple's text recognition on your device. Photos are not uploaded or stored by us. Only a photo you choose to import is processed as a receipt, in the same way as any receipt you add.</li>
     <li><strong>Import from Apple Home:</strong> if you choose it, MajaSam reads the list of devices in your Home (each device's name, maker, model and room). It never controls your devices and does not receive serial numbers. The devices you select are added to your vault, and their maker and model names are sent to our recall service to check for safety recalls, like any other purchase.</li>
     <li><strong>Point and Know and label scanning:</strong> these use your camera live and compare what it sees with your own vault on your phone. The camera picture is not recorded or sent anywhere. A barcode number or product name may be looked up in public product databases.</li>
+    <li><strong>Check before you buy and Aisle scan:</strong> the camera reads barcodes and printed text on your phone. The picture is not recorded or sent anywhere. A barcode number is looked up in public product databases (such as Open Food Facts and UPCitemdb) straight from your phone, and the product's name, brand and model are sent to our server to check for recalls, as for any other product. If you type the store you are in or the price on the tag, they are used for the price and return-policy lookups and, if you choose Ask family, shared as described under "Family Vault". Nothing from these scans is saved in your account unless you tap "I bought it".</li>
   </ul>
 
   <h2>Services That Process Your Data</h2>
@@ -76,12 +78,14 @@
     <li><strong>Resend:</strong> sends account emails such as password reset codes.</li>
     <li><strong>Sentry:</strong> receives crash and error reports.</li>
     <li><strong>SerpAPI:</strong> price and product-image lookups use a product name and store, with no account information. Barcode scans are looked up in public product databases (Open Food Facts, UPCItemDB). Recall checks use public U.S. government recall data.</li>
+    <li><strong>GitHub Pages:</strong> hosts majasam.com and a public list of store and maker contact details that the app downloads every few hours. The download carries no account details or personal data.</li>
   </ul>
 
   <h2>Third-Party AI Services</h2>
   <p>MajaSam uses OpenAI's API for AI features: reading receipts, checking coverage, assessing damage, drafting claims and disputes, and answering questions about a purchase in the Purchase Assistant. When you use one of these features, the relevant text, receipt image, or question is sent to OpenAI for processing, and the result is shown to you.</p>
   <p>OpenAI's API terms state that data submitted via the API is not used to train their models by default. You can review OpenAI's policies at <a href="https://openai.com/policies/api-data-usage-policies" target="_blank">openai.com/policies/api-data-usage-policies</a>.</p>
   <p>AI features are off until you allow them. The first time you use one, the app asks for your permission, or you can turn them on in More, Settings, Privacy &amp; Security. You can turn them off again at any time, and when they are off no AI feature runs for your account.</p>
+  <p>To keep the service available and its cost reasonable, each account has a daily allowance for AI features. Heavy use can pause them until the next day. Everything else in MajaSam keeps working.</p>
   <p>Recall alerts also use OpenAI in the background: from time to time our server compares the product names in your vault with public recall notices and sends you an alert if one matches. Only product names and brands are sent for this. Background recall matching runs only for accounts that have allowed AI features, and turning AI features off stops it. We do not use any other AI service for processing your content.</p>
 
   <h2>Google API Limited Use Compliance</h2>
@@ -103,6 +107,8 @@
 
   <h2>Family Vault</h2>
   <p>If you create or join a family vault, the owner approves who joins. Members can see the purchases you choose to share, including the product photo. Unless you switch on "Hide receipt, serial &amp; notes" for an item, members can also see its receipt, serial number and notes. Your warranty and other documents stay private to you. Family sharing needs cloud backup on, because shared items are stored in the cloud. Members can leave a vault at any time.</p>
+
+  <p>If you use Ask family, the question you send contains the product's name, brand and model, the store, the tag price you entered, and the result lines from your check. It goes only to the vault members you pick (everyone in the vault, or the people you tick). Those people can answer Yes or No with an optional short note, and the answers are visible to you and to the other people the question was sent to. A question and its answers disappear for everyone after 7 days, or when you remove the question, and are deleted if you delete your account. Notifications about questions and answers are delivered through Expo's push service and show the person's name and the product name.</p>
 
   <h2>Data Retention and Deletion</h2>
   <p>Your purchases, claims, and files are kept on your phone until you delete them. If you turned on cloud backup, copies in your account are kept until you delete them or delete your account, and turning backup off does not remove them. When you choose Delete Account in the app, we remove your purchases, claims, family memberships, notification tokens, and uploaded receipts and documents, and then delete your sign-in account. If you signed in with Apple, we also tell Apple to disconnect MajaSam from your Apple ID. We also delete your customer record at RevenueCat, our subscription provider. Deleting your account does not cancel an App Store subscription; to stop billing, cancel it in iOS Settings under your name, Subscriptions. Copies in database backups are removed as the backups expire, within 30 days. Error reports and server logs are kept by our providers for a limited time and do not contain your receipts or passwords.</p>
