@@ -1,0 +1,915 @@
+{
+  "note": "Store and maker contacts the MajaSam app downloads once a day. An entry here replaces the built-in entry with the same storeName / name; new names are added. Web addresses must be https.",
+  "updated": "2026-10-13",
+  "stores": [
+    {
+      "storeName": "Best Buy",
+      "keywords": [
+        "best buy",
+        "bestbuy"
+      ],
+      "windowDays": 15,
+      "howToClaim": "Bring your receipt to any Best Buy store or call 1-888-237-8289. Ask a customer service rep for a price adjustment.",
+      "conditions": "Item must be identical. Excludes open-box, clearance, daily deals, and limited-time offers.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-888-237-8289"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Best Buy location"
+        }
+      ],
+      "returnPortalUrl": "https://www.bestbuy.com/site/help-topics/return-exchange-policy/pcmcat260800050014.c",
+      "priceMatchPortalUrl": "https://www.bestbuy.com/site/help-topics/price-match-guarantee/pcmcat290300050002.c"
+    },
+    {
+      "storeName": "Target",
+      "keywords": [
+        "target"
+      ],
+      "windowDays": 14,
+      "howToClaim": "Visit Guest Services at any Target store or call 1-800-440-0680 with your receipt.",
+      "conditions": "Item must be identical and in stock at Target. Excludes Target Circle deals and clearance items.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-800-440-0680"
+        },
+        {
+          "label": "Support",
+          "value": "target.com/help"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit Guest Services at any Target"
+        }
+      ],
+      "returnPortalUrl": "https://www.target.com/account/orders",
+      "priceMatchPortalUrl": "https://www.target.com/help/articles/policies-guidelines/price-match-guarantee"
+    },
+    {
+      "storeName": "Walmart",
+      "keywords": [
+        "walmart",
+        "wal-mart",
+        "wal mart"
+      ],
+      "windowDays": 7,
+      "howToClaim": "Bring your receipt to the customer service desk at any Walmart store. Request a price adjustment.",
+      "conditions": "Item must be currently in stock at the same Walmart location. Excludes online-only prices.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-800-925-6278"
+        },
+        {
+          "label": "Support",
+          "value": "walmart.com/help"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit the customer service desk"
+        }
+      ],
+      "returnPortalUrl": "https://www.walmart.com/returns"
+    },
+    {
+      "storeName": "Costco",
+      "keywords": [
+        "costco"
+      ],
+      "windowDays": 30,
+      "howToClaim": "Request a price adjustment online via Costco Customer Service or visit the membership desk at any Costco warehouse. Have your membership card and receipt ready.",
+      "conditions": "Available to Costco members only. Applies if the Costco price drops within 30 days of purchase.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-800-774-2678"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit the membership desk at any Costco"
+        }
+      ],
+      "returnPortalUrl": "https://customerservice.costco.com/app/answers/answer_view/a_id/6874",
+      "priceMatchPortalUrl": "https://customerservice.costco.com"
+    },
+    {
+      "storeName": "Apple",
+      "keywords": [
+        "apple",
+        "apple store"
+      ],
+      "windowDays": 14,
+      "howToClaim": "Contact Apple Support at 1-800-275-2273 or visit an Apple Store. Have your order number or receipt ready.",
+      "conditions": "Item must be purchased directly from Apple (retail or online). Excludes refurbished products.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-800-275-2273"
+        },
+        {
+          "label": "Support",
+          "value": "apple.com/support"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Apple Store"
+        }
+      ],
+      "returnPortalUrl": "https://www.apple.com/shop/help/returns_refund"
+    },
+    {
+      "storeName": "Home Depot",
+      "keywords": [
+        "home depot",
+        "homedepot"
+      ],
+      "windowDays": 30,
+      "howToClaim": "Bring your receipt to the customer service desk or call 1-800-466-3337. Ask for a price adjustment.",
+      "conditions": "Item must be identical and currently in stock. Also price-matches most major retailers.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-800-466-3337"
+        },
+        {
+          "label": "Support",
+          "value": "homedepot.com/c/Customer_Support_Answers"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit the customer service desk"
+        }
+      ]
+    },
+    {
+      "storeName": "Lowe's",
+      "keywords": [
+        "lowe's",
+        "lowes"
+      ],
+      "windowDays": 30,
+      "howToClaim": "Visit customer service at any Lowe's store or call 1-800-445-6937 with your receipt.",
+      "conditions": "Item must be identical and in stock. Also price-matches major local and online retailers.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-800-445-6937"
+        },
+        {
+          "label": "Support",
+          "value": "lowes.com/l/help"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit customer service at any Lowe's"
+        }
+      ]
+    },
+    {
+      "storeName": "Macy's",
+      "keywords": [
+        "macy's",
+        "macys"
+      ],
+      "windowDays": 10,
+      "howToClaim": "Visit the store or call 1-800-289-6229. Have your receipt or order number ready.",
+      "conditions": "Applies to regular and sale-price items. Excludes limited-time promotions and clearance.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-800-289-6229"
+        },
+        {
+          "label": "Support",
+          "value": "macys.com/customer-service/articles/contact-us"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Macy's customer service desk"
+        }
+      ]
+    },
+    {
+      "storeName": "Amazon",
+      "keywords": [
+        "amazon"
+      ],
+      "windowDays": 30,
+      "howToClaim": "Contact Amazon customer service via chat or call 1-800-275-2273. Reference your order number.",
+      "conditions": "Applies to items sold and shipped by Amazon (not third-party sellers). Excludes Lightning Deals.",
+      "contacts": [
+        {
+          "label": "Chat",
+          "value": "amazon.com/hz/contact-us"
+        },
+        {
+          "label": "Phone",
+          "value": "1-800-275-2273"
+        }
+      ],
+      "returnPortalUrl": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7",
+      "priceMatchPortalUrl": "https://www.amazon.com/hz/contact-us"
+    },
+    {
+      "storeName": "Sam's Club",
+      "keywords": [
+        "sam's club",
+        "sams club"
+      ],
+      "windowDays": 30,
+      "howToClaim": "Visit the Member Service desk at any Sam's Club with your receipt.",
+      "conditions": "Members only. Applies to items still in stock at the same Sam's Club.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-888-746-7726"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit the Member Service desk"
+        }
+      ]
+    },
+    {
+      "storeName": "GameStop",
+      "keywords": [
+        "gamestop",
+        "game stop"
+      ],
+      "windowDays": 7,
+      "howToClaim": "Bring your receipt to any GameStop store and ask for a price adjustment at the counter.",
+      "conditions": "New items only. Excludes pre-owned games, accessories, and limited-time deals.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-800-883-8895"
+        },
+        {
+          "label": "In-store",
+          "value": "Ask at the counter of any GameStop"
+        }
+      ]
+    },
+    {
+      "storeName": "Staples",
+      "keywords": [
+        "staples"
+      ],
+      "windowDays": 14,
+      "howToClaim": "Visit customer service at any Staples store or call 1-800-782-7537 with your receipt.",
+      "conditions": "Item must be identical. Also price-matches major office supply retailers.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-800-782-7537"
+        },
+        {
+          "label": "Support",
+          "value": "staples.com/sbd/content/help"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit customer service at any Staples"
+        }
+      ]
+    },
+    {
+      "storeName": "John Lewis",
+      "keywords": [
+        "john lewis",
+        "johnlewis"
+      ],
+      "windowDays": 28,
+      "howToClaim": "Contact John Lewis customer services online at johnlewis.com or call 03456 049 049. Quote your order number and the lower price you've found.",
+      "conditions": "Price match applies to identical products sold by a UK retailer. Excludes marketplace sellers, clearance and outlet items.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "03456 049 049"
+        },
+        {
+          "label": "Support",
+          "value": "johnlewis.com/customer-services"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any John Lewis store"
+        }
+      ],
+      "returnPortalUrl": "https://www.johnlewis.com/customer-services/returns"
+    },
+    {
+      "storeName": "Argos",
+      "keywords": [
+        "argos"
+      ],
+      "windowDays": 14,
+      "howToClaim": "Visit argos.co.uk/help or call 0345 640 2020. Provide your order number and a link to the lower price.",
+      "conditions": "Identical product must be in stock at a UK retailer. Excludes clearance, outlet and marketplace listings.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "0345 640 2020"
+        },
+        {
+          "label": "Support",
+          "value": "argos.co.uk/help"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Argos store"
+        }
+      ],
+      "returnPortalUrl": "https://www.argos.co.uk/help/returns-and-refunds"
+    },
+    {
+      "storeName": "Currys",
+      "keywords": [
+        "currys",
+        "currys pc world"
+      ],
+      "windowDays": 7,
+      "howToClaim": "Contact Currys via chat at currys.co.uk or call 0344 561 1234. Have your order number and proof of the lower price ready.",
+      "conditions": "Identical product must be in stock at a UK retailer. Excludes third-party marketplace sellers.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "0344 561 1234"
+        },
+        {
+          "label": "Support",
+          "value": "currys.co.uk/help-and-support.html"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Currys store"
+        }
+      ]
+    },
+    {
+      "storeName": "AO.com",
+      "keywords": [
+        "ao.com",
+        "ao com"
+      ],
+      "windowDays": 28,
+      "howToClaim": "Call AO on 0161 470 1200 or use live chat at ao.com. Provide your order number and evidence of the lower price.",
+      "conditions": "Identical product must be available from a UK online or high-street retailer. Excludes outlet and auction sites.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "0161 470 1200"
+        },
+        {
+          "label": "Support",
+          "value": "ao.com/help-and-advice"
+        }
+      ]
+    },
+    {
+      "storeName": "Very",
+      "keywords": [
+        "very",
+        "very.co.uk"
+      ],
+      "windowDays": 14,
+      "howToClaim": "Contact Very customer services at very.co.uk/help or call 0800 11 00 00 with your order number and proof of the lower price.",
+      "conditions": "Identical product must be in stock at a UK retailer. Excludes clearance, bundle and marketplace items.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "0800 11 00 00"
+        },
+        {
+          "label": "Support",
+          "value": "very.co.uk/help"
+        }
+      ]
+    },
+    {
+      "storeName": "JB Hi-Fi",
+      "keywords": [
+        "jb hi-fi",
+        "jb hifi",
+        "jbhifi"
+      ],
+      "windowDays": 30,
+      "howToClaim": "Show a JB Hi-Fi team member the current lower price in-store, or contact support at jbhifi.com.au. They will beat or match the price.",
+      "conditions": "Item must be identical and currently in stock at an Australian retailer. Excludes clearance, seconds and online-only specials.",
+      "contacts": [
+        {
+          "label": "Sales line",
+          "value": "13 52 44"
+        },
+        {
+          "label": "Support",
+          "value": "jbhifi.com.au/pages/help-and-support"
+        },
+        {
+          "label": "In-store",
+          "value": "Show a team member the lower price"
+        }
+      ],
+      "returnPortalUrl": "https://www.jbhifi.com.au/pages/help-and-support"
+    },
+    {
+      "storeName": "Harvey Norman",
+      "keywords": [
+        "harvey norman",
+        "harveynorman"
+      ],
+      "windowDays": 14,
+      "howToClaim": "Visit your local Harvey Norman store or call 1300 464 278. Show the lower advertised price and a team member will match it.",
+      "conditions": "Identical product must be in stock at an Australian retailer. Excludes trade, commercial and clearance prices.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1300 464 278"
+        },
+        {
+          "label": "Support",
+          "value": "harveynorman.com.au/contact-us"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Harvey Norman store"
+        }
+      ]
+    },
+    {
+      "storeName": "Officeworks",
+      "keywords": [
+        "officeworks"
+      ],
+      "windowDays": 30,
+      "howToClaim": "Bring proof of the lower price to any Officeworks store or contact them at officeworks.com.au. They'll beat the price by 5%.",
+      "conditions": "Identical in-stock product from an Australian retailer. Officeworks will beat the price by 5%, not just match it.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1300 633 423"
+        },
+        {
+          "label": "Support",
+          "value": "officeworks.com.au/contact-us"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Officeworks store"
+        }
+      ]
+    },
+    {
+      "storeName": "Canadian Tire",
+      "keywords": [
+        "canadian tire",
+        "canadiantire"
+      ],
+      "windowDays": 30,
+      "howToClaim": "Bring your receipt and proof of the lower price to any Canadian Tire store or call 1-800-387-8803.",
+      "conditions": "Identical product must be in stock at a Canadian retailer. Excludes online-only prices and limited-time offers.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-800-387-8803"
+        },
+        {
+          "label": "Support",
+          "value": "canadiantire.ca/en/customer-service/contact-us.html"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Canadian Tire store"
+        }
+      ]
+    },
+    {
+      "storeName": "The Bay",
+      "keywords": [
+        "the bay",
+        "hudson's bay",
+        "hudsons bay",
+        "hbc"
+      ],
+      "windowDays": 14,
+      "howToClaim": "Hudson's Bay has closed its stores and website, so there is no one to send this request to.",
+      "conditions": "Identical product from a Canadian retailer. Excludes clearance, flash sales and outlet items.",
+      "contacts": []
+    },
+    {
+      "storeName": "Best Buy Canada",
+      "keywords": [
+        "best buy canada"
+      ],
+      "windowDays": 15,
+      "howToClaim": "Bring your receipt to any Best Buy Canada store or call 1-866-237-8289. Ask for a price adjustment.",
+      "conditions": "Item must be identical and in stock at a Canadian retailer. Excludes open-box, clearance and limited-time offers.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-866-237-8289"
+        },
+        {
+          "label": "Support",
+          "value": "bestbuy.ca/en-ca/help"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Best Buy Canada store"
+        }
+      ]
+    },
+    {
+      "storeName": "MediaMarkt",
+      "keywords": [
+        "mediamarkt",
+        "media markt"
+      ],
+      "windowDays": 14,
+      "howToClaim": "Visit a MediaMarkt store or contact support at mediamarkt.de (or your local country site). Show proof of the lower price.",
+      "conditions": "Identical product from an authorised retailer in the same country. Excludes marketplace sellers and clearance items.",
+      "contacts": [
+        {
+          "label": "Support",
+          "value": "mediamarkt.de/de/service"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any MediaMarkt store"
+        }
+      ]
+    },
+    {
+      "storeName": "Saturn",
+      "keywords": [
+        "saturn"
+      ],
+      "windowDays": 14,
+      "howToClaim": "Visit a Saturn store or contact support at saturn.de. Show proof of the lower advertised price from an authorised retailer.",
+      "conditions": "Identical product from an authorised retailer in the same country. Excludes marketplace and clearance items.",
+      "contacts": [
+        {
+          "label": "Support",
+          "value": "saturn.de/de/service/kundenservice"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Saturn store"
+        }
+      ]
+    },
+    {
+      "storeName": "Fnac",
+      "keywords": [
+        "fnac"
+      ],
+      "windowDays": 30,
+      "howToClaim": "Contact Fnac via fnac.com or visit a store. Submit a price match request with proof of the lower price.",
+      "conditions": "Identical product from an authorised French or EU retailer. Excludes second-hand, marketplace and clearance items.",
+      "contacts": [
+        {
+          "label": "Support",
+          "value": "fnac.com"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Fnac store"
+        }
+      ]
+    }
+  ],
+  "makers": [
+    {
+      "name": "Apple",
+      "keywords": [
+        "apple",
+        "beats"
+      ],
+      "url": "https://support.apple.com/contact"
+    },
+    {
+      "name": "Samsung",
+      "keywords": [
+        "samsung"
+      ],
+      "url": "https://www.samsung.com/us/support/contact/"
+    },
+    {
+      "name": "Sony",
+      "keywords": [
+        "sony"
+      ],
+      "url": "https://www.sony.com/en/SonyInfo/SupportAll/"
+    },
+    {
+      "name": "LG",
+      "keywords": [
+        "lg"
+      ],
+      "url": "https://www.lg.com/us/support"
+    },
+    {
+      "name": "Dyson",
+      "keywords": [
+        "dyson"
+      ],
+      "url": "https://www.dyson.com/support"
+    },
+    {
+      "name": "Ring",
+      "keywords": [
+        "ring"
+      ],
+      "url": "https://ring.com/support"
+    },
+    {
+      "name": "Galanz",
+      "keywords": [
+        "galanz"
+      ],
+      "url": "https://www.galanz.com/us/"
+    },
+    {
+      "name": "Bose",
+      "keywords": [
+        "bose"
+      ],
+      "url": "https://support.bose.com/"
+    },
+    {
+      "name": "Google Nest",
+      "keywords": [
+        "nest"
+      ],
+      "url": "https://support.google.com/googlehome"
+    },
+    {
+      "name": "Fitbit",
+      "keywords": [
+        "fitbit"
+      ],
+      "url": "https://support.google.com/fitbit"
+    },
+    {
+      "name": "Google",
+      "keywords": [
+        "google",
+        "pixel"
+      ],
+      "url": "https://support.google.com/"
+    },
+    {
+      "name": "Microsoft",
+      "keywords": [
+        "microsoft",
+        "surface",
+        "xbox"
+      ],
+      "url": "https://support.microsoft.com/contactus"
+    },
+    {
+      "name": "Dell",
+      "keywords": [
+        "dell",
+        "alienware"
+      ],
+      "url": "https://www.dell.com/support/home/en-us"
+    },
+    {
+      "name": "HP",
+      "keywords": [
+        "hp"
+      ],
+      "url": "https://support.hp.com/us-en/contact"
+    },
+    {
+      "name": "Lenovo",
+      "keywords": [
+        "lenovo"
+      ],
+      "url": "https://www.lenovo.com/us/en/contact/"
+    },
+    {
+      "name": "Canon",
+      "keywords": [
+        "canon"
+      ],
+      "url": "https://www.usa.canon.com/support"
+    },
+    {
+      "name": "Nikon",
+      "keywords": [
+        "nikon"
+      ],
+      "url": "https://www.nikonproductsupport.com/s/?language=en_US"
+    },
+    {
+      "name": "GoPro",
+      "keywords": [
+        "gopro"
+      ],
+      "url": "https://gopro.com/help"
+    },
+    {
+      "name": "Philips",
+      "keywords": [
+        "philips"
+      ],
+      "url": "https://www.usa.philips.com/c-s/support"
+    },
+    {
+      "name": "Bosch",
+      "keywords": [
+        "bosch"
+      ],
+      "url": "https://www.bosch-home.com/us/en/services"
+    },
+    {
+      "name": "GE Appliances",
+      "keywords": [
+        "ge"
+      ],
+      "url": "https://www.geappliances.com/ge/service-and-support/"
+    },
+    {
+      "name": "Shark",
+      "keywords": [
+        "shark"
+      ],
+      "url": "https://support.sharkclean.com/"
+    },
+    {
+      "name": "Ninja",
+      "keywords": [
+        "ninja"
+      ],
+      "url": "https://support.ninjakitchen.com/"
+    },
+    {
+      "name": "Vitamix",
+      "keywords": [
+        "vitamix"
+      ],
+      "url": "https://www.vitamix.com/us/en_us/support"
+    },
+    {
+      "name": "iRobot",
+      "keywords": [
+        "irobot",
+        "roomba"
+      ],
+      "url": "https://homesupport.irobot.com/s/"
+    },
+    {
+      "name": "Garmin",
+      "keywords": [
+        "garmin"
+      ],
+      "url": "https://support.garmin.com/en-US/"
+    },
+    {
+      "name": "Logitech",
+      "keywords": [
+        "logitech"
+      ],
+      "url": "https://support.logi.com/hc/en-001"
+    },
+    {
+      "name": "Nintendo",
+      "keywords": [
+        "nintendo"
+      ],
+      "url": "https://en-americas-support.nintendo.com/"
+    },
+    {
+      "name": "Hisense",
+      "keywords": [
+        "hisense"
+      ],
+      "url": "https://www.hisense-usa.com/support"
+    },
+    {
+      "name": "Eufy",
+      "keywords": [
+        "eufy"
+      ],
+      "url": "https://service.eufy.com/"
+    },
+    {
+      "name": "Sonos",
+      "keywords": [
+        "sonos"
+      ],
+      "url": "https://support.sonos.com/"
+    },
+    {
+      "name": "Cuisinart",
+      "keywords": [
+        "cuisinart"
+      ],
+      "url": "https://www.cuisinart.com/support/product-assistance.html"
+    },
+    {
+      "name": "DeWalt",
+      "keywords": [
+        "dewalt"
+      ],
+      "url": "https://www.dewalt.com/en-us/support"
+    },
+    {
+      "name": "Ryobi",
+      "keywords": [
+        "ryobi"
+      ],
+      "url": "https://www.ryobitools.com/support"
+    },
+    {
+      "name": "Milwaukee",
+      "keywords": [
+        "milwaukee"
+      ],
+      "url": "https://www.milwaukeetool.com/Support"
+    },
+    {
+      "name": "HOROW",
+      "keywords": [
+        "horow"
+      ],
+      "url": "https://horow.com/pages/contact-us"
+    },
+    {
+      "name": "ASUS",
+      "keywords": [
+        "asus"
+      ],
+      "url": "https://www.asus.com/support/"
+    },
+    {
+      "name": "Razer",
+      "keywords": [
+        "razer"
+      ],
+      "url": "https://mysupport.razer.com/"
+    },
+    {
+      "name": "Peloton",
+      "keywords": [
+        "peloton"
+      ],
+      "url": "https://support.onepeloton.com/s/"
+    },
+    {
+      "name": "Oura",
+      "keywords": [
+        "oura"
+      ],
+      "url": "https://support.ouraring.com/hc/en-us"
+    },
+    {
+      "name": "Roku",
+      "keywords": [
+        "roku"
+      ],
+      "url": "https://support.roku.com/"
+    },
+    {
+      "name": "Arlo",
+      "keywords": [
+        "arlo"
+      ],
+      "url": "https://us.arlo.com/pages/support"
+    },
+    {
+      "name": "Blink",
+      "keywords": [
+        "blink"
+      ],
+      "url": "https://support.blinkforhome.com/"
+    },
+    {
+      "name": "Weber",
+      "keywords": [
+        "weber"
+      ],
+      "url": "https://consumer-care.weber.com/s/contactsupport"
+    },
+    {
+      "name": "Traeger",
+      "keywords": [
+        "traeger"
+      ],
+      "url": "https://www.traeger.com/contact-us"
+    },
+    {
+      "name": "YETI",
+      "keywords": [
+        "yeti"
+      ],
+      "url": "https://www.yeti.com/contact-us.html"
+    }
+  ]
+}
