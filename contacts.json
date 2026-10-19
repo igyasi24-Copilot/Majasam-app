@@ -1,6 +1,6 @@
 {
   "note": "Store and maker contacts the MajaSam app downloads once a day. An entry here replaces the built-in entry with the same storeName / name; new names are added. Web addresses must be https.",
-  "updated": "2026-10-13",
+  "updated": "2026-10-19",
   "stores": [
     {
       "storeName": "Best Buy",
@@ -580,6 +580,271 @@
           "value": "Visit any Fnac store"
         }
       ]
+    },
+    {
+      "storeName": "Kohl's",
+      "keywords": [
+        "kohls"
+      ],
+      "windowDays": 0,
+      "howToClaim": "Start an online return from Order History on kohls.com, or take the item to a Kohl's store.",
+      "conditions": "MajaSam has no price-match policy on file for Kohl's. Check Kohl's own pages for current terms.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "855-564-5705"
+        },
+        {
+          "label": "Support",
+          "value": "kohls.com/faq/category/27"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Kohl's store (in-store purchases are returned in store)"
+        }
+      ],
+      "returnPortalUrl": "https://www.kohls.com/faq/category/4"
+    },
+    {
+      "storeName": "JCPenney",
+      "keywords": [
+        "jcpenney",
+        "jc penney",
+        "j c penney"
+      ],
+      "windowDays": 0,
+      "howToClaim": "Start a return from your order on jcpenney.com, or take the item to a JCPenney store. Furniture returns are arranged by phone.",
+      "conditions": "MajaSam has no price-match policy on file for JCPenney. Check JCPenney's own pages for current terms.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-800-322-1189"
+        },
+        {
+          "label": "Support",
+          "value": "jcpenney.com/m/customer-service"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any JCPenney store"
+        }
+      ],
+      "returnPortalUrl": "https://www.jcpenney.com/m/customer-service/returns"
+    },
+    {
+      "storeName": "IKEA",
+      "keywords": [
+        "ikea"
+      ],
+      "windowDays": 0,
+      "howToClaim": "Take the item and your receipt or order confirmation to an IKEA store, or call customer support for returns and missing parts.",
+      "conditions": "MajaSam has no price-match policy on file for IKEA. Check IKEA's own pages for current terms.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-888-888-4532"
+        },
+        {
+          "label": "Support",
+          "value": "ikea.com/us/en/customer-service/contact-us/"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any IKEA store"
+        }
+      ],
+      "returnPortalUrl": "https://www.ikea.com/us/en/customer-service/returns-claims/"
+    },
+    {
+      "storeName": "Newegg",
+      "keywords": [
+        "newegg"
+      ],
+      "windowDays": 0,
+      "howToClaim": "Start a return (RMA) from your Account Dashboard on newegg.com. Every return needs an approved RMA number on the package.",
+      "conditions": "MajaSam has no price-match policy on file for Newegg. Marketplace sellers set their own return terms.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "800-390-1119"
+        },
+        {
+          "label": "Support",
+          "value": "help.newegg.com"
+        }
+      ],
+      "returnPortalUrl": "https://kb.newegg.com/knowledge-base/returning-an-item"
+    },
+    {
+      "storeName": "B&H Photo",
+      "keywords": [
+        "bh photo",
+        "b h photo",
+        "bhphotovideo"
+      ],
+      "windowDays": 0,
+      "howToClaim": "Request an RMA on bhphotovideo.com, or call or use Live Chat to start a return.",
+      "conditions": "MajaSam has no price-match policy on file for B&H. Check B&H's own pages for current terms.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "800-221-5743"
+        },
+        {
+          "label": "Support",
+          "value": "bhphotovideo.com/find/contactForm.jsp"
+        }
+      ],
+      "returnPortalUrl": "https://www.bhphotovideo.com/find/cart_returnitem.jsp"
+    },
+    {
+      "storeName": "Micro Center",
+      "keywords": [
+        "micro center",
+        "microcenter"
+      ],
+      "windowDays": 0,
+      "howToClaim": "Take the item to any Micro Center store for a refund or exchange. For online orders, use Live Chat and a representative helps with the return.",
+      "conditions": "MajaSam has no price-match policy on file for Micro Center. Check Micro Center's own pages for current terms.",
+      "contacts": [
+        {
+          "label": "Support",
+          "value": "microcenter.com/site/customer-support/help-center.aspx"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Micro Center store"
+        }
+      ],
+      "returnPortalUrl": "https://www.microcenter.com/site/content/return-policy-page.aspx"
+    },
+    {
+      "storeName": "Abt Electronics",
+      "keywords": [
+        "abt electronics"
+      ],
+      "windowDays": 0,
+      "howToClaim": "Contact Abt customer service by phone, chat or email to request a return or exchange.",
+      "conditions": "MajaSam has no price-match policy on file for Abt. Check Abt's own pages for current terms.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "800-860-3577"
+        },
+        {
+          "label": "Support",
+          "value": "abt.com/help/contact-us"
+        }
+      ],
+      "returnPortalUrl": "https://www.abt.com/help/abt-return-policy"
+    },
+    {
+      "storeName": "Nordstrom Rack",
+      "keywords": [
+        "nordstrom rack",
+        "nordstromrack"
+      ],
+      "windowDays": 0,
+      "howToClaim": "Start a return from your order on nordstromrack.com, or take the item to any Nordstrom Rack or Nordstrom store. In-store purchases can't be returned by mail.",
+      "conditions": "MajaSam has no price-match policy on file for Nordstrom Rack. Final Sale items can't be returned, and a mail return has a shipping fee taken from the refund. Check Rack's own pages for current terms.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-888-966-6283"
+        },
+        {
+          "label": "Support",
+          "value": "nordstromrack.com/customer-service"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Nordstrom Rack or Nordstrom store"
+        }
+      ],
+      "returnPortalUrl": "https://www.nordstromrack.com/customer-service/ship-return-policy"
+    },
+    {
+      "storeName": "Nordstrom",
+      "keywords": [
+        "nordstrom"
+      ],
+      "windowDays": 0,
+      "howToClaim": "Start a return from your order on nordstrom.com, take the item to a Nordstrom store, or call customer care.",
+      "conditions": "MajaSam has no price-match policy on file for Nordstrom. Check Nordstrom's own pages for current terms.",
+      "contacts": [
+        {
+          "label": "Phone",
+          "value": "1-888-282-6060"
+        },
+        {
+          "label": "Support",
+          "value": "nordstrom.com/browse/customer-service"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Nordstrom store"
+        }
+      ],
+      "returnPortalUrl": "https://www.nordstrom.com/browse/services/return-policy"
+    },
+    {
+      "storeName": "Ross",
+      "keywords": [
+        "ross dress for less",
+        "ross stores",
+        "word:ross"
+      ],
+      "windowDays": 0,
+      "howToClaim": "Take the item, your receipt and the card or ID used to a Ross store. Ross returns are handled in store.",
+      "conditions": "MajaSam has no price-match policy on file for Ross. Check Ross's own pages for current terms.",
+      "contacts": [
+        {
+          "label": "Support",
+          "value": "rossstores.com/contact-us"
+        },
+        {
+          "label": "In-store",
+          "value": "Visit any Ross store"
+        }
+      ],
+      "returnPortalUrl": "https://www.rossstores.com/contact-us/"
+    },
+    {
+      "storeName": "Sears",
+      "keywords": [
+        "sears"
+      ],
+      "windowDays": 0,
+      "howToClaim": "Start a return or exchange from the help page on sears.com. Items sold by marketplace sellers go back to that seller.",
+      "conditions": "MajaSam has no price-match policy on file for Sears. Check Sears' own pages for current terms.",
+      "contacts": [
+        {
+          "label": "Support",
+          "value": "sears.com/staticpage/content/sears/shc/en/customer-service/customer-service.html"
+        },
+        {
+          "label": "Help",
+          "value": "knowledge.sears.com"
+        }
+      ],
+      "returnPortalUrl": "https://www.sears.com/staticpage/content/sears/shc/en/customer-service/returns.html"
+    },
+    {
+      "storeName": "Kmart",
+      "keywords": [
+        "kmart",
+        "k mart"
+      ],
+      "windowDays": 0,
+      "howToClaim": "Follow the return steps on kmart.com. Items sold by marketplace sellers go back to that seller.",
+      "conditions": "MajaSam has no price-match policy on file for Kmart. Check Kmart's own pages for current terms.",
+      "contacts": [
+        {
+          "label": "Support",
+          "value": "customerservice.kmart.com"
+        }
+      ],
+      "returnPortalUrl": "https://www.kmart.com/staticpage/content/kmart/shc/en/customer-service/how-to-return-or-cancel-order.html"
     }
   ],
   "makers": [
