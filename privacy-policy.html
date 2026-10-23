@@ -17,47 +17,47 @@
 </head>
 <body>
   <h1>MajaSam Privacy Policy</h1>
-  <p>Last updated: October 15, 2026</p>
+  <p>Last updated: October 23, 2026</p>
 
   <h2>Overview</h2>
-  <p>MajaSam is an iOS app that helps you track purchases, monitor return windows and warranties, and, if you choose, scan Gmail for receipts. This policy explains what we collect, why, who processes it, how long we keep it, and the choices you have. We do not sell your data and we do not show ads.</p>
+  <p>MajaSam helps you track purchases, return windows, and warranties and, if you choose, scan Gmail for receipts. We do not sell your data and we do not show ads.</p>
 
   <h2>Information We Collect</h2>
   <ul>
-    <li><strong>Account information:</strong> your email address, your name, and your password. Passwords are stored only as salted hashes by our sign-in provider; we never see or store your password. If you sign in with Apple instead, we receive an Apple identifier for you, your name (only if you share it, and Apple sends it only the first time), and either your real email address or Apple's private relay address, depending on your choice. We never receive your Apple ID password.</li>
-    <li><strong>Purchase information you add or import:</strong> product names, prices, stores, dates, warranty and return details, notes, receipt photos, warranty and loss documents, and claims you create (stored in your account only if you turn on cloud backup).</li>
-    <li><strong>Gmail receipts (optional):</strong> see "Gmail Data" below.</li>
-    <li><strong>Subscription status:</strong> whether you have a plan. Payments are handled by Apple; we never receive your card details.</li>
-    <li><strong>Notification token:</strong> a device token used to send reminders and recall alerts you turn on, and family questions and answers. A token belongs to the phone and to the account signed in on it. Signing in on a phone as someone else, or signing out, removes the earlier account's link to that phone.</li>
-    <li><strong>Family questions and answers (optional):</strong> if you use "Ask family", see "Family Vault" below.</li>
-    <li><strong>Shopping country (optional):</strong> your country choice for Check before you buy. It is kept on your phone and sent with price and recall lookups so they use that country's stores, currency and rules.</li>
-    <li><strong>Technical and crash information:</strong> app version, device type, and error reports that help us fix problems.</li>
-    <li><strong>Voice questions (optional):</strong> if you use the microphone button in the Purchase Assistant, your speech is converted to text by Apple's speech recognition on your device or by Apple. We receive only the resulting text, not the audio.</li>
+    <li><strong>Account:</strong> your email address, your name, and your password (stored only as a salted hash by our sign-in provider; we never see it). If you sign in with Apple instead, we receive an Apple identifier, your name (only if you share it, and Apple sends it only the first time), and either your real email or Apple's private relay address. We never receive your Apple ID password</li>
+    <li><strong>Purchases you add or import:</strong> product names, prices, stores, dates, warranty and return details, notes, receipt photos, warranty and loss documents, claims and disputes, and the call notes you type after phoning a company (stored in your account only if you turn on cloud backup)</li>
+    <li>Gmail receipts, only if you connect Gmail (see below)</li>
+    <li>Subscription status. Apple handles payment; we never receive your card details</li>
+    <li>A notification token, to send reminders and recall alerts you turn on, and family questions and answers. A token belongs to the phone and to the account signed in on it. Signing in on a phone as someone else, or signing out, removes the earlier account's link to that phone</li>
+    <li>Family questions and answers, if you use "Ask family" (see Sharing and Family Vault)</li>
+    <li>Your shopping country choice for Check before you buy (kept on your phone, and sent with price and recall lookups so they use that country's stores, currency and rules)</li>
+    <li>Technical and crash information that helps us fix problems</li>
+    <li><strong>Voice questions, if you use the microphone:</strong> Apple's speech recognition turns your speech into text, and we receive only the text</li>
+    <li>Questions you type or say to Ask my stuff or to the assistant on a purchase, and what you describe in Repair or replace and Find ideas. We do not keep the conversation (see AI Processing and Services That Process Your Data)</li>
   </ul>
 
   <h2>Gmail Data</h2>
-  <p>MajaSam requests read-only access to your Gmail account (<code>gmail.readonly</code> scope). This access is used solely to:</p>
+  <p>If you connect Gmail, MajaSam requests read-only access (gmail.readonly). It is used only to:</p>
   <ul>
-    <li>Scan your inbox for purchase receipts and subscription confirmations. Only messages that match receipt-style subjects or senders are read, including receipt PDF attachments.</li>
-    <li>Extract product name, price, store name, and purchase date from receipt emails</li>
-    <li>Populate your personal purchase vault within the app</li>
+    <li>Find purchase receipts and subscription confirmations (only messages with receipt-style subjects or senders, including receipt PDFs)</li>
+    <li>Extract the product, price, store, and date</li>
+    <li>Add the purchases you choose to your vault</li>
   </ul>
-  <p>MajaSam does not store your emails. The text of a receipt email is sent to our server only for AI-based receipt extraction and is not retained after processing. We do not read, store, or share emails unrelated to purchase receipts. Only the purchase details you choose to save are kept in your vault.</p>
-  <p>Your Gmail access tokens are stored only on your device, in secure storage, and are never sent to or stored on our servers.</p>
-  <p>Because Gmail holds sensitive information, we require two-step sign-in on your MajaSam account before Gmail can be connected or scanned.</p>
-  <p>You can disconnect Gmail at any time from Settings inside the MajaSam app. This revokes all Gmail access immediately. Signing out also revokes it.</p>
+  <p>We do not store your emails. A receipt's text is sent to our server only for AI extraction and is not kept after processing. Your Gmail access tokens stay on your device. We require two-step sign-in on your account before Gmail can be connected. You can disconnect Gmail at any time in Settings, and signing out also revokes it.</p>
 
   <h2>How We Use Your Information</h2>
   <ul>
-    <li>To provide the app: if you turn on cloud backup, store and sync your purchases across your devices; track return windows and warranties, and help you file claims.</li>
-    <li>To extract details from receipts and answer your questions with the AI features you use.</li>
-    <li>To send reminders and alerts you turn on, including recall alerts when a product in your vault matches a public recall notice.</li>
-    <li>To keep the service secure, prevent abuse, and respond to support requests.</li>
+    <li>If you turn on cloud backup, store and sync your purchases across your devices</li>
+    <li>Track return windows and warranties and help you file claims</li>
+    <li>Read receipts and answer questions with the AI features you use</li>
+    <li>Send reminders and recall alerts you turn on</li>
+    <li>Keep the service secure and respond to support requests</li>
   </ul>
 
   <h2>Cloud Backup (Your Choice)</h2>
-  <p>When you first use MajaSam on a phone, you choose whether to back up your purchases to your account. If you turn backup on, your purchases, claims, receipt photos and documents are stored in your account with our database and file-storage provider (Supabase, United States) so you can restore them on a new phone and share items with family. If you leave it off, they stay on your phone only, and signing out or losing the phone erases them. You can change this at any time in More &rarr; Cloud backup.</p>
-  <p>Turning backup off stops new uploads but does not delete what was already backed up; you can delete items individually or delete your account to remove everything. Receipts you scan and questions you ask are still sent to our AI service to be read, and recall checks send product names and models, whether or not backup is on. The text of Gmail emails is never uploaded.</p>
+  <p>When you first use MajaSam on a phone, you choose whether to back up your purchases to your account. If you turn backup on, your purchases, claims, disputes, call notes, receipt photos and documents are stored in your account with our database and file-storage provider (Supabase, United States) so you can restore them on a new phone and share items with family. If you leave it off, they stay on your phone only, and signing out or losing the phone erases them. You can change this at any time in More → Cloud backup.</p>
+  <p>Turning backup off stops new uploads but does not delete what was already backed up; you can delete items individually or delete your account to remove everything. Family sharing needs backup on, because shared items are stored in the cloud.</p>
+  <p>Receipts you scan and questions you ask are still sent to our AI service to be read, and recall checks send product names and models, whether or not backup is on. The text of Gmail emails is never saved to your backup. When AI has to read a receipt, its text is sent for that purpose only (see Gmail).</p>
 
   <h2>Photos, Apple Home and Camera</h2>
   <ul>
@@ -65,83 +65,89 @@
     <li><strong>Import from Apple Home:</strong> if you choose it, MajaSam reads the list of devices in your Home (each device's name, maker, model and room). It never controls your devices and does not receive serial numbers. The devices you select are added to your vault, and their maker and model names are sent to our recall service to check for safety recalls, like any other purchase.</li>
     <li><strong>Point and Know and label scanning:</strong> these use your camera live and compare what it sees with your own vault on your phone. The camera picture is not recorded or sent anywhere. A barcode number or product name may be looked up in public product databases.</li>
     <li><strong>Check before you buy and Aisle scan:</strong> the camera reads barcodes and printed text on your phone. We do not store the picture. What leaves your phone depends on the product:
-      <ul>
-        <li>A barcode number is looked up in public product databases (such as Open Food Facts and UPCitemdb) straight from your phone, so they can see your phone's network address. It is also sent to our server, which searches the web for the number to find the product's name.</li>
-        <li>If no barcode source can name the product, the printed text the camera read (at most 80 lines) is sent to our server and to OpenAI to name it. Before anything is sent, your phone removes lines that look like names and addresses (such as the lines after "Ship to"), street addresses, email addresses, phone numbers, tracking numbers, and serial, device and network identifiers.</li>
-        <li>In Check before you buy only, if the product still cannot be named, the sharp photo the scanner took of the box can be sent to our server and then to OpenAI to identify the product. Our server does not save it, and the photo is deleted from your phone when the check ends. Aisle scan does not send photos.</li>
-        <li>The product's name, brand, model, barcode number and the country you chose to shop in are used to look up recalls, prices and return rules. If you type the store you are in or the price on the tag, they are used for the price and return lookups and, if you choose Ask family, shared as described under "Family Vault".</li>
-        <li>Text and photos go to OpenAI only if you have allowed AI features. Nothing from these scans is saved in your account unless you tap "I bought it".</li>
-      </ul>
+    <ul>
+      <li>A barcode number is looked up in public product databases (such as Open Food Facts and UPCitemdb) straight from your phone, so they can see your phone's network address. It is also sent to our server, which searches the web for the number to find the product's name.</li>
+      <li>If no barcode source can name the product, the printed text the camera read (at most 80 lines) is sent to our server and to OpenAI to name it. Before anything is sent, your phone removes lines that look like names and addresses (such as the lines after "Ship to"), street addresses, email addresses, phone numbers, tracking numbers, and serial, device and network identifiers.</li>
+      <li>In Check before you buy only, if the product still cannot be named, the sharp photo the scanner took of the box can be sent to our server and then to OpenAI to identify the product. Our server does not save it, and the photo is deleted from your phone when the check ends. Aisle scan does not send photos.</li>
+      <li>The product's name, brand, model, barcode number and the country you chose to shop in are used to look up recalls, prices and return rules. If you type the store you are in or the price on the tag, they are used for the price and return lookups and, if you choose Ask family, shared as described under Sharing and Family Vault.</li>
+      <li>Text and photos go to OpenAI only if you have allowed AI features. Nothing from these scans is saved in your account unless you tap "I bought it".</li>
+    </ul>
     </li>
+    <li><strong>Claim photos:</strong> when you add photos to a claim, MajaSam can read the picture of a serial label on your phone, using Apple's text recognition, to check it against the serial number saved with the purchase. That picture is not uploaded for this check. Photos on a claim are kept like your other claim files (on your phone, and in your account if you turn on cloud backup) and are put in the claim package you create.</li>
+    <li><strong>Siri answers:</strong> so Siri can answer "Ask my stuff" without opening the app, MajaSam keeps a short summary of your own purchases on your phone, in the same private storage the widget uses (the summary is not uploaded and does not include other family members' items). Siri says nothing about your purchases while the phone is locked. Fixed questions such as warranties, returns, spending, recalls and receipts are answered from that summary. Other questions are answered by Apple's on-device model on phones that have Apple Intelligence, so nothing is sent to us or to OpenAI; on other phones Siri says it cannot answer them.</li>
+    <li><strong>Sharing a photo or a link to MajaSam:</strong> when you share a photo, MajaSam reads its text on your phone to tell a receipt from a product photo, and asks you what it is. If you say it is a product you are thinking of buying, it is named the way Check before you buy names a box (if its text is not enough, the photo may be sent to our server and OpenAI to make a best guess, only if you have allowed AI features, and you are asked to confirm the guess before anything is checked). When you share a shopping link, your phone opens that page directly to read its title, and the product name is then looked up like a name you typed. If a shared link points to a picture, your phone asks that site what it is and, if it is a picture, downloads it and treats it like a photo you shared. If you share several pictures that are pieces of one long receipt, you can join them into one picture; joining happens on your phone, and the joined picture is then treated like any receipt you add. A photo you say is of something you own is saved with that item.</li>
+    <li><strong>Recall requests:</strong> Fix my recall prepares a request from your record and the recall notice. MajaSam never sends it. You send it yourself from your own mail app, or you open the maker's website or phone number from the app. The note of when you sent it, and a reminder to follow up, stay on your phone.</li>
+    <li><strong>Compare and Repair or replace:</strong> your Compare list is kept on your phone for up to 7 days, and Repair or replace estimates and prices are kept on your phone for a few days to save repeat lookups. They are not uploaded.</li>
   </ul>
 
   <h2>Services That Process Your Data</h2>
-  <p>We use the following providers to run MajaSam. They process data only to provide their service to us.</p>
   <ul>
-    <li><strong>Supabase:</strong> sign-in and, if you turn on cloud backup, our database and file storage. Your data is hosted in the United States.</li>
-    <li><strong>Render:</strong> hosts the server that relays your requests to the services below.</li>
-    <li><strong>OpenAI:</strong> AI processing (see below).</li>
-    <li><strong>Apple:</strong> in-app purchases and, if you use them, speech recognition and Sign in with Apple (used only to create and secure your MajaSam account).</li>
-    <li><strong>RevenueCat:</strong> manages subscription status. It receives an account identifier (not your email address) and your purchase status.</li>
-    <li><strong>Expo:</strong> delivers push notifications and app updates.</li>
-    <li><strong>Resend:</strong> sends account emails such as password reset codes.</li>
-    <li><strong>Sentry:</strong> receives crash and error reports.</li>
-    <li><strong>SerpAPI:</strong> price, barcode and product-image lookups use a product name, brand, barcode number, store and shopping country, with no account information.</li>
-    <li><strong>Public product and recall data:</strong> barcodes are looked up in public product databases (Open Food Facts, UPCitemdb) from your phone. Recall checks use public recall lists from the United States (CPSC), the European Union (Safety Gate), France (RappelConso) and the United Kingdom (Food Standards Agency). Our server downloads these lists and compares your product's name, brand, model and barcode with them. Nothing about you is sent to the agencies.</li>
-    <li><strong>GitHub Pages:</strong> hosts majasam.com and a public list of store and maker contact details that the app downloads every few hours. The download carries no account details or personal data.</li>
+    <li><strong>Supabase:</strong> sign-in and, if you turn on cloud backup, our database and file storage (hosted in the United States)</li>
+    <li><strong>Render:</strong> the server that relays your requests</li>
+    <li><strong>OpenAI:</strong> AI processing (see below)</li>
+    <li><strong>Apple:</strong> in-app purchases, speech recognition, and Sign in with Apple (used only to create and secure your account)</li>
+    <li><strong>RevenueCat:</strong> subscription status (it receives an account identifier, not your email)</li>
+    <li><strong>Expo:</strong> push notifications and app updates</li>
+    <li><strong>Resend:</strong> account emails such as password reset codes</li>
+    <li><strong>Sentry:</strong> crash and error reports</li>
+    <li><strong>SerpAPI:</strong> price, barcode, product-image and shopping-idea lookups use a product name, brand, barcode number, store, the words you type in Find ideas, and your shopping country, with no account details. Our server keeps the results of an idea search for an hour and shares them with anyone who types the same words; they contain no personal data</li>
+    <li><strong>Public product and recall data:</strong> barcodes are looked up in public product databases (Open Food Facts, UPCitemdb) from your phone. Recall checks use public recall lists from the United States (CPSC), the European Union (Safety Gate), France (RappelConso) and the United Kingdom (Food Standards Agency). Our server downloads these lists and compares your product's name, brand, model and barcode with them. Nothing about you is sent to the agencies</li>
+    <li><strong>GitHub Pages:</strong> hosts majasam.com and a public list of store and maker contact details that the app downloads every few hours. The download carries no account details or personal data</li>
   </ul>
 
   <h2>Third-Party AI Services</h2>
-  <p>MajaSam uses OpenAI's API for AI features: reading receipts, checking coverage, assessing damage, drafting claims and disputes, and answering questions about a purchase in the Purchase Assistant. When you use one of these features, the relevant text, receipt image, or question is sent to OpenAI for processing, and the result is shown to you.</p>
-  <p>OpenAI's API terms state that data submitted via the API is not used to train their models by default. You can review OpenAI's policies at <a href="https://openai.com/policies/api-data-usage-policies" target="_blank">openai.com/policies/api-data-usage-policies</a>.</p>
-  <p>AI features are off until you allow them. The first time you use one, the app asks for your permission, or you can turn them on in More, Settings, Privacy &amp; Security. You can turn them off again at any time, and when they are off no AI feature runs for your account.</p>
+  <p>We use OpenAI's API to read receipts, check coverage, assess damage, draft claims, estimate repair costs, and answer questions about your purchases. When you use one of these features, the relevant text, image, or question is sent to OpenAI and the result is shown to you. OpenAI's API terms state that API data is not used to train their models by default.</p>
+  <p>The first time you use an AI feature, the app asks for your permission, and you can turn AI features off at any time in More → Settings → Privacy &amp; Security.</p>
   <p>To keep the service available and its cost reasonable, each account has a daily allowance for AI features. Heavy use can pause them until the next day. Everything else in MajaSam keeps working.</p>
-  <p>Check before you buy and Aisle scan also use OpenAI to name a product from its printed text or, in Check before you buy, from a photo of the box when barcode lookups cannot; to compare a product's name, brand and model with recall notices; and, for shops in the United States, to estimate a typical return window. Your phone first removes names, addresses, contact details and identifiers from printed text, as described under "Photos, Apple Home and Camera". If you turn AI features off, none of this is sent.</p>
-  <p>Recall alerts also use OpenAI in the background: from time to time our server compares the product names in your vault with public recall notices and sends you an alert if one matches. Only product names and brands are sent for this. Background recall matching runs only for accounts that have allowed AI features, and turning AI features off stops it. We do not use any other AI service for processing your content.</p>
+  <p>Check before you buy and Aisle scan also use OpenAI to name a product from its printed text or, in Check before you buy, from a photo of the box when barcode lookups cannot; to compare a product's name, brand and model with recall notices; and, for shops in the United States, to estimate a typical return window. Your phone first removes names, addresses, contact details and identifiers from printed text, as described under Photos, Apple Home and Camera. If you turn AI features off, none of this is sent.</p>
+  <p>Ask my stuff answers questions about your own purchases. Questions about warranty and return dates, totals, recalls and receipts are answered on your phone from your saved records, and nothing is sent anywhere. For any other question, on a phone with Apple Intelligence the answer is also made on the phone. Otherwise your question, and the saved details of the few purchases it seems to be about (name, brand, model, store, purchase date, price, warranty and return dates, serial number, whether a receipt is saved, the titles of active recalls, and the status of claims), are sent to OpenAI through our server. Your whole list of purchases is never sent, purchases that belong to other family members are never included, and we do not keep the conversation.</p>
+  <p>Repair or replace sends the product's name, brand, model and category, the problem you describe, and your currency to OpenAI to estimate a repair cost, a typical lifespan and the price of a new one. What you paid, when you bought it and your other details are not sent. The estimate is kept on your phone for about a week, and our server keeps one answer for each product and problem, so people with the same product and problem share it.</p>
+  <p>Recall alerts also use OpenAI in the background to compare the product names in your vault with public recall notices. Only product names and brands are sent for this, and it runs only for accounts that have allowed AI features.</p>
+  <p>We do not use any other AI service for your content.</p>
+  <p>You can review OpenAI's policies at <a href="https://openai.com/policies/api-data-usage-policies" target="_blank">openai.com/policies/api-data-usage-policies</a>.</p>
 
   <h2>Google API Limited Use Compliance</h2>
   <div class="compliance-box">
-    <p>MajaSam's use of information received from Google APIs, including Gmail data, adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements. Gmail data accessed through Google APIs is used only to provide the receipt-scanning feature within MajaSam. The text of receipt emails is sent to OpenAI's API only to extract purchase details for you; it is not used to develop, improve, or train any AI or machine learning model, ours or OpenAI's. Raw or derived Google user data is never sold, never used for advertising, and never shared with third parties other than as described here. No person at MajaSam reads your email content except with your consent, to investigate abuse or a security issue, or to comply with the law.</p>
+  <p>MajaSam's use of information received from Google APIs, including Gmail data, adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+  <p>Gmail data is used only to provide the receipt-scanning feature. Receipt text is sent to OpenAI's API only to extract purchase details for you; it is not used to develop, improve, or train any AI or machine learning model. Google user data is never sold, never used for advertising, and never shared except as described here. No person at MajaSam reads your email content except with your consent, to investigate abuse or a security issue, or to comply with the law.</p>
   </div>
 
   <h2>Data Protection</h2>
   <ul>
-    <li><strong>Encryption in transit:</strong> all data sent between the app and our servers uses TLS/HTTPS.</li>
-    <li><strong>Encryption at rest:</strong> data in our database and file storage (Supabase) is encrypted at rest with AES-256. Records saved on your phone are encrypted with AES-256-GCM, with the key kept in the iOS Keychain.</li>
-    <li><strong>Access controls:</strong> every request to our server needs your signed-in session. You can reach only your own data, plus purchases that a family vault member has chosen to share with you. Receipt and document files are private and are opened through short-lived links.</li>
-    <li><strong>Two-step sign-in:</strong> available for every account, with recovery codes in case you lose your phone.</li>
-    <li><strong>Minimal retention of email:</strong> email content is processed in memory and not stored after extraction.</li>
+    <li>Data sent between the app and our servers is encrypted with TLS</li>
+    <li>Data in our database and file storage is encrypted at rest (AES-256). Records saved on your phone are encrypted, with the key kept in the iOS Keychain</li>
+    <li>Every request to our server needs your signed-in session, and you can reach only your own data and purchases that family members have chosen to share with you</li>
+    <li>Receipt and document files are private and opened through short-lived links</li>
+    <li>Two-step sign-in is available for every account, with recovery codes if you lose your phone</li>
+    <li>For your protection you are signed out after 30 days, or after 7 days without opening the app. Your saved purchases stay on your phone and come back when you sign in</li>
   </ul>
 
-  <h2>Sharing</h2>
-  <p>We do not sell your data. We share it only with the providers listed above to run the app, with family vault members you approve (only the purchases you choose to share), and when required by law or to protect safety and security.</p>
-
-  <h2>Family Vault</h2>
-  <p>If you create or join a family vault, the owner approves who joins. Members can see the purchases you choose to share, including the product photo. Unless you switch on "Hide receipt, serial &amp; notes" for an item, members can also see its receipt, serial number and notes. Your warranty and other documents stay private to you. Family sharing needs cloud backup on, because shared items are stored in the cloud. Members can leave a vault at any time.</p>
-
+  <h2>Sharing and Family Vault</h2>
+  <p>We do not sell your data. We share it only with the services above to run the app, with family vault members you approve, and when required by law or to protect safety and security.</p>
+  <p>Family vault members see the purchases you choose to share. They see the product photo, and the receipt, serial number and notes too unless you switch on Hide receipt, serial &amp; notes for that item. Your warranty and other documents, and your disputes and call notes, stay private to you. Members can leave a vault at any time.</p>
   <p>If you use Ask family, the question you send contains the product's name, brand and model, the store, the tag price you entered, and the result lines from your check. It goes only to the vault members you pick (everyone in the vault, or the people you tick). Those people can answer Yes or No with an optional short note, and the answers are visible to you and to the other people the question was sent to. A question and its answers disappear for everyone after 7 days, or when you remove the question, and are deleted if you delete your account. Notifications about questions and answers are delivered through Expo's push service and show the person's name and the product name.</p>
 
   <h2>Data Retention and Deletion</h2>
-  <p>Your purchases, claims, and files are kept on your phone until you delete them. If you turned on cloud backup, copies in your account are kept until you delete them or delete your account, and turning backup off does not remove them. When you choose Delete Account in the app, we remove your purchases, claims, family memberships, notification tokens, and uploaded receipts and documents, and then delete your sign-in account. If you signed in with Apple, we also tell Apple to disconnect MajaSam from your Apple ID. We also delete your customer record at RevenueCat, our subscription provider. Deleting your account does not cancel an App Store subscription; to stop billing, cancel it in iOS Settings under your name, Subscriptions. Copies in database backups are removed as the backups expire, within 30 days. Error reports and server logs are kept by our providers for a limited time and do not contain your receipts or passwords.</p>
+  <p>Your purchases, claims, disputes, call notes, and files are kept on your phone until you delete them. If you turned on cloud backup, copies in your account are kept until you delete them or delete your account, and turning backup off does not remove them. When you choose Delete Account, we remove your purchases, claims, disputes, call notes, family memberships, notification tokens, and uploaded receipts and documents, and then delete your sign-in account. If you signed in with Apple, we also tell Apple to disconnect MajaSam from your Apple ID. We also delete your customer record at RevenueCat, our subscription provider. Deleting your account does not cancel an App Store subscription; to stop billing, cancel it in iOS Settings under your name, Subscriptions. Copies in database backups are removed as the backups expire, within 30 days. Error reports and server logs are kept by our providers for a limited time. They do not contain your receipts, passwords or sign-in tokens, but they can contain product names and barcodes you look up. A conversation in Ask my stuff or the assistant is not saved; it disappears when you leave the screen.</p>
 
   <h2>Your Choices and Rights</h2>
   <ul>
-    <li>Edit or delete any purchase, claim, or document in the app.</li>
-    <li>Download a copy of your data from More, Download My Data.</li>
-    <li>Delete your account from More, Delete Account. This cannot be undone.</li>
-    <li>Disconnect Gmail at any time.</li>
-    <li>Turn AI features off in More, Settings, Privacy &amp; Security. When they are off, nothing is sent to OpenAI, and background recall matching skips your account. You can turn them back on at any time.</li>
-    <li>If you live where privacy laws such as the GDPR or the California Consumer Privacy Act apply, you may have additional rights, including access, correction, deletion, and portability. Email us and we will respond.</li>
+    <li>Edit or delete any purchase, claim, dispute, call note, or document</li>
+    <li>Download a copy of your data from More → Download My Data</li>
+    <li>Delete your account from More → Delete Account (this cannot be undone)</li>
+    <li>Disconnect Gmail at any time</li>
+    <li>Turn AI features off in More → Settings → Privacy &amp; Security. When they are off, nothing is sent to OpenAI and background recall matching skips your account. You can turn them on again at any time</li>
   </ul>
+  <p>If you live where privacy laws such as the GDPR or the California Consumer Privacy Act apply, you may have additional rights, including access, correction, deletion, and portability. Email us at <a href="mailto:support@majasam.com">support@majasam.com</a> and we will respond.</p>
 
   <h2>Where Your Data Is Processed</h2>
-  <p>Our database is in the United States, and our providers may process data in the United States and other countries. By using MajaSam you understand your information may be processed there.</p>
+  <p>Our database is in the United States, and our providers may process data in the United States and other countries.</p>
 
   <h2>Children's Privacy</h2>
-  <p>MajaSam is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+  <p>MajaSam is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us personal information, contact us at <a href="mailto:support@majasam.com">support@majasam.com</a> and we will delete it.</p>
 
   <h2>Changes to This Policy</h2>
-  <p>We may update this policy from time to time. We will notify users of significant changes through the app and update the date above.</p>
+  <p>We may update this policy from time to time. We will notify you of significant changes through the app and update the date above.</p>
 
   <h2>Contact</h2>
   <p>If you have questions about this privacy policy or want to use your rights, contact us at <a href="mailto:support@majasam.com">support@majasam.com</a>.</p>
