@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>An item saved in MajaSam</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; background: #0a0e17; color: #eef0f7; margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; }
+    main { max-width: 420px; }
+    .badge { width: 84px; height: 84px; border-radius: 50%; background: rgba(124,92,255,0.18); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 40px; }
+    h1 { font-size: 1.6rem; margin: 0 0 12px; }
+    p { font-size: 1.05rem; line-height: 1.6; color: #b9c0d4; margin: 0 0 22px; }
+    a.button { display: block; background: #7c5cff; color: #fff; text-decoration: none; font-weight: 700; padding: 14px 28px; border-radius: 14px; margin: 0 0 12px; }
+    a.second { display: block; color: #8fb0ff; text-decoration: none; font-weight: 700; padding: 12px; }
+    small { display: block; margin-top: 26px; color: #7f8aa3; line-height: 1.5; }
+    small a { color: #8fb0ff; }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- A MajaSam QR sticker: the item's id comes after "#" (it is never sent to a server). Nothing about the item or its owner is on this page. -->
+    <div class="badge" aria-hidden="true">&#128230;</div>
+    <h1>This item is saved in MajaSam</h1>
+    <p>Its warranty, receipt and serial number are kept in its owner's MajaSam. If it's yours, or shared with you by your family, it opens in the app.</p>
+    <a class="button" id="open" href="majasam://">Open in MajaSam</a>
+    <a class="second" href="https://apps.apple.com/app/id6811484480">Get MajaSam for iPhone</a>
+    <small>MajaSam keeps your receipts, warranties and returns in one place.<br>This page shows nothing about the item or its owner.<br>Questions? <a href="mailto:support@majasam.com">support@majasam.com</a></small>
+  </main>
+  <script>
+    (function () {
+      var id = "";
+      try { id = decodeURIComponent((location.hash || "").slice(1)).trim(); } catch (e) { id = ""; }
+      if (!/^[A-Za-z0-9_-]{1,64}$/.test(id)) return; // not a sticker link: the page stays as it is
+      var link = "majasam://purchase/" + encodeURIComponent(id);
+      document.getElementById("open").href = link;
+      // Try once on its own; iOS asks "Open in MajaSam?" when the app is installed and does nothing when it is not.
+      setTimeout(function () { location.href = link; }, 300);
+    })();
+  </script>
+</body>
+</html>
