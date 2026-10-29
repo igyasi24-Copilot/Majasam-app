@@ -30,6 +30,8 @@
     <li>Forwarded order emails, only if you forward one to your private MajaSam address (see Forwarded Order Emails below)</li>
     <li>Subscription status. Apple handles payment; we never receive your card details</li>
     <li>A notification token, to send reminders and recall alerts you turn on, and family questions and answers. A token belongs to the phone and to the account signed in on it. Signing in on a phone as someone else, or signing out, removes the earlier account's link to that phone</li>
+    <li><strong>Lock-screen cards:</strong> If cloud backup is on, our server keeps a token for each phone's lock-screen cards and reads your return deadlines and recalls from your backup to start them.</li>
+    <li><strong>Your IP address:</strong> Our hosts see your phone's IP address when the app connects. We use it only to limit abuse, and it is kept only in short-lived logs.</li>
     <li>Family questions and answers, if you use "Ask family" (see Sharing and Family Vault)</li>
     <li>Your shopping country choice for Check before you buy (kept on your phone, and sent with price and recall lookups so they use that country's stores, currency and rules)</li>
     <li>Technical and crash information that helps us fix problems</li>
@@ -103,6 +105,7 @@
     <li><strong>SerpAPI:</strong> price, barcode, product-image and shopping-idea lookups use a product name, brand, barcode number, store, the words you type in Find ideas, and your shopping country, with no account details. Our server keeps the results of an idea search for an hour and shares them with anyone who types the same words; they contain no personal data</li>
     <li><strong>Public product and recall data:</strong> barcodes are looked up in public product databases (Open Food Facts, UPCitemdb) from your phone. Recall checks use public recall lists from the United States (CPSC), the European Union (Safety Gate), France (RappelConso) and the United Kingdom (Food Standards Agency). Our server downloads these lists and compares your product's name, brand, model and barcode with them. Nothing about you is sent to the agencies</li>
     <li><strong>GitHub Pages:</strong> hosts majasam.com and a public list of store and maker contact details that the app downloads every few hours. The download carries no account details or personal data</li>
+    <li><strong>Exchange rates:</strong> currency conversions use public exchange-rate services (Frankfurter and a public currency list), which receive only currency codes and dates.</li>
   </ul>
 
   <h2>Third-Party AI Services</h2>
@@ -128,6 +131,7 @@
 
   <h2>Data Protection</h2>
   <ul>
+    <li>If you turn on Face ID lock, iOS checks your face; MajaSam only learns whether it matched.</li>
     <li>Data sent between the app and our servers is encrypted with TLS</li>
     <li>Data in our database and file storage is encrypted at rest (AES-256). Records saved on your phone are encrypted, with the key kept in the iOS Keychain</li>
     <li>Every request to our server needs your signed-in session, and you can reach only your own data and purchases that family members have chosen to share with you</li>
