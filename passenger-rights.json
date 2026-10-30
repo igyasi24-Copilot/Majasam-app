@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "checked": "2026-10-30",
+  "eu": {
+    "countries": ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","IS","NO","LI","CH","GP","MQ","GF","RE","YT","MF"],
+    "airlines": ["EI","AF","KL","LH","LX","OS","SN","TP","IB","I2","VY","UX","FR","RK","W6","W4","EC","SK","AY","DY","D8","FI","OG","LO","AZ","A3","OA","BT","EW","DE","4Y","HV","TO","V7","KM","OU","LG","EN","WK","2L","NT","YW","QS","RO","FB","XK","SS","BF","TX","S4","SP","NO","WF","CY","E4","DI","GQ","JU","JP","VL","EB"],
+    "amounts": [250, 400, 600],
+    "currency": "EUR",
+    "link": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm"
+  },
+  "uk": {
+    "countries": ["GB"],
+    "airlines": ["BA","VS","U2","LS","BY","LM","CJ","T3","MT"],
+    "amounts": [220, 350, 520],
+    "currency": "GBP",
+    "link": "https://www.caa.co.uk/passengers-and-public/your-rights-as-a-passenger/delays-and-cancellations/"
+  },
+  "us": {
+    "bumpedMax": [1075, 2150],
+    "domesticBagLimit": 4700,
+    "refundLink": "https://www.transportation.gov/airconsumer/refunds",
+    "bumpedLink": "https://www.transportation.gov/individuals/aviation-consumer-protection/bumping-oversales",
+    "bagLink": "https://www.transportation.gov/airconsumer/mishandled-baggage",
+    "dashboardLink": "https://www.transportation.gov/airconsumer/airline-customer-service-dashboard"
+  },
+  "montreal": {
+    "bagLimitSdr": 1519,
+    "bagLimitUsd": 2000,
+    "link": "https://www.transportation.gov/airconsumer/mishandled-baggage"
+  }
+}
