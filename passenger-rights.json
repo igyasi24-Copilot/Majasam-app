@@ -2,21 +2,144 @@
   "version": 1,
   "checked": "2026-10-30",
   "eu": {
-    "countries": ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","IS","NO","LI","CH","GP","MQ","GF","RE","YT","MF"],
-    "airlines": ["EI","AF","KL","LH","LX","OS","SN","TP","IB","I2","VY","UX","FR","RK","W6","W4","EC","SK","AY","DY","D8","FI","OG","LO","AZ","A3","OA","BT","EW","DE","4Y","HV","TO","V7","KM","OU","LG","EN","WK","2L","NT","YW","QS","RO","FB","XK","SS","BF","TX","S4","SP","NO","WF","CY","E4","DI","GQ","JU","JP","VL","EB"],
-    "amounts": [250, 400, 600],
+    "countries": [
+      "AT",
+      "BE",
+      "BG",
+      "HR",
+      "CY",
+      "CZ",
+      "DK",
+      "EE",
+      "FI",
+      "FR",
+      "DE",
+      "GR",
+      "HU",
+      "IE",
+      "IT",
+      "LV",
+      "LT",
+      "LU",
+      "MT",
+      "NL",
+      "PL",
+      "PT",
+      "RO",
+      "SK",
+      "SI",
+      "ES",
+      "SE",
+      "IS",
+      "NO",
+      "LI",
+      "CH",
+      "GP",
+      "MQ",
+      "GF",
+      "RE",
+      "YT",
+      "MF"
+    ],
+    "airlines": [
+      "EI",
+      "AF",
+      "KL",
+      "LH",
+      "LX",
+      "OS",
+      "SN",
+      "TP",
+      "IB",
+      "I2",
+      "VY",
+      "UX",
+      "FR",
+      "RK",
+      "W6",
+      "W4",
+      "EC",
+      "SK",
+      "AY",
+      "DY",
+      "D8",
+      "FI",
+      "OG",
+      "LO",
+      "AZ",
+      "A3",
+      "OA",
+      "BT",
+      "EW",
+      "DE",
+      "4Y",
+      "HV",
+      "TO",
+      "V7",
+      "KM",
+      "OU",
+      "LG",
+      "EN",
+      "WK",
+      "2L",
+      "NT",
+      "YW",
+      "QS",
+      "RO",
+      "FB",
+      "XK",
+      "SS",
+      "BF",
+      "TX",
+      "S4",
+      "SP",
+      "NO",
+      "WF",
+      "CY",
+      "E4",
+      "DI",
+      "GQ",
+      "JU",
+      "JP",
+      "VL",
+      "EB"
+    ],
+    "amounts": [
+      250,
+      400,
+      600
+    ],
     "currency": "EUR",
     "link": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm"
   },
   "uk": {
-    "countries": ["GB"],
-    "airlines": ["BA","VS","U2","LS","BY","LM","CJ","T3","MT"],
-    "amounts": [220, 350, 520],
+    "countries": [
+      "GB"
+    ],
+    "airlines": [
+      "BA",
+      "VS",
+      "U2",
+      "LS",
+      "BY",
+      "LM",
+      "CJ",
+      "T3",
+      "MT"
+    ],
+    "amounts": [
+      220,
+      350,
+      520
+    ],
     "currency": "GBP",
     "link": "https://www.caa.co.uk/passengers-and-public/your-rights-as-a-passenger/delays-and-cancellations/"
   },
   "us": {
-    "bumpedMax": [1075, 2150],
+    "bumpedMax": [
+      1075,
+      2150
+    ],
     "domesticBagLimit": 4700,
     "refundLink": "https://www.transportation.gov/airconsumer/refunds",
     "bumpedLink": "https://www.transportation.gov/individuals/aviation-consumer-protection/bumping-oversales",
@@ -27,5 +150,99 @@
     "bagLimitSdr": 1519,
     "bagLimitUsd": 2000,
     "link": "https://www.transportation.gov/airconsumer/mishandled-baggage"
+  },
+  "airlineContacts": {
+    "UA": {
+      "name": "United Airlines",
+      "url": "https://www.united.com/en/us/customer-care"
+    },
+    "AA": {
+      "name": "American Airlines",
+      "url": "https://www.aa.com/web/i18n/customer-service/contact-american/american-customer-relations.html"
+    },
+    "DL": {
+      "name": "Delta Air Lines",
+      "url": "https://www.delta.com/us/en/need-help/overview?commentComplaintsForm"
+    },
+    "WN": {
+      "name": "Southwest Airlines",
+      "url": "https://www.southwest.com/contact-us/"
+    },
+    "AS": {
+      "name": "Alaska Airlines",
+      "url": "https://www.alaskaair.com/content/about-us/help-contact"
+    },
+    "LH": {
+      "name": "Lufthansa",
+      "url": "https://www.lufthansa.com/us/en/support/fast-compensation"
+    },
+    "BA": {
+      "name": "British Airways",
+      "url": "https://www.britishairways.com/content/information/delayed-or-cancelled-flights"
+    },
+    "TP": {
+      "name": "TAP Air Portugal",
+      "url": "https://www.flytap.com/en-us/help/requests-complaints"
+    },
+    "AF": {
+      "name": "Air France",
+      "url": "https://wwws.airfrance.us/information/legal/reclamation"
+    },
+    "KL": {
+      "name": "KLM",
+      "url": "https://www.klm.com/contact"
+    },
+    "U2": {
+      "name": "easyJet",
+      "url": "https://www.easyjet.com/en/help-centre/contact/contact-us"
+    },
+    "EC": {
+      "name": "easyJet",
+      "url": "https://www.easyjet.com/en/help-centre/contact/contact-us"
+    },
+    "EI": {
+      "name": "Aer Lingus",
+      "url": "https://www.aerlingus.com/support/customer-care/contact-us/"
+    },
+    "OS": {
+      "name": "Austrian Airlines",
+      "url": "https://www.austrian.com/xx/de/kontakt"
+    },
+    "SN": {
+      "name": "Brussels Airlines",
+      "url": "https://www.brusselsairlines.com/de/en/contact"
+    },
+    "EW": {
+      "name": "Eurowings",
+      "url": "https://www.eurowings.com/en/information/news-help/delays-cancellations-air-passenger-rights.html"
+    },
+    "IB": {
+      "name": "Iberia",
+      "url": "https://www.iberia.com/es/customer-relations/"
+    },
+    "AZ": {
+      "name": "ITA Airways",
+      "url": "https://www.complaint.ita-airways.com/s/complaint?language=en_US&market=EN"
+    },
+    "DY": {
+      "name": "Norwegian",
+      "url": "https://www.norwegian.com/uk/help-contact/"
+    },
+    "FR": {
+      "name": "Ryanair",
+      "url": "https://help.ryanair.com/hc/en-gb/articles/12891665589009-Applying-for-Compensation"
+    },
+    "SK": {
+      "name": "SAS",
+      "url": "https://www.flysas.com/en/customer-service/"
+    },
+    "VY": {
+      "name": "Vueling",
+      "url": "https://www.vueling.com/en/we-are-vueling/contact"
+    },
+    "W6": {
+      "name": "Wizz Air",
+      "url": "https://wizzair.com/en-gb/information-and-services/compliments-and-complaints"
+    }
   }
 }
