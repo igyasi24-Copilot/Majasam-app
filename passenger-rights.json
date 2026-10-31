@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked": "2026-10-30",
+  "checked": "2026-10-31",
   "eu": {
     "countries": [
       "AT",
@@ -141,15 +141,15 @@
       2150
     ],
     "domesticBagLimit": 4700,
-    "refundLink": "https://www.transportation.gov/airconsumer/refunds",
+    "refundLink": "https://www.transportation.gov/individuals/aviation-consumer-protection/refunds",
     "bumpedLink": "https://www.transportation.gov/individuals/aviation-consumer-protection/bumping-oversales",
-    "bagLink": "https://www.transportation.gov/airconsumer/mishandled-baggage",
+    "bagLink": "https://www.transportation.gov/lost-delayed-or-damaged-baggage",
     "dashboardLink": "https://www.transportation.gov/airconsumer/airline-customer-service-dashboard"
   },
   "montreal": {
     "bagLimitSdr": 1519,
     "bagLimitUsd": 2000,
-    "link": "https://www.transportation.gov/airconsumer/mishandled-baggage"
+    "link": "https://www.transportation.gov/lost-delayed-or-damaged-baggage"
   },
   "airlineContacts": {
     "UA": {
@@ -206,7 +206,7 @@
     },
     "OS": {
       "name": "Austrian Airlines",
-      "url": "https://www.austrian.com/xx/de/kontakt"
+      "url": "https://www.austrian.com/us/en/contact"
     },
     "SN": {
       "name": "Brussels Airlines",
