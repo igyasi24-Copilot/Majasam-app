@@ -100,10 +100,9 @@
       .nav-mobile-toggle { display: flex; }
     }
 
-    /* ─── HERO ────────────────────────────────────── */
+    /* ─── HERO (Nov 14, 2026: two columns, bright) ─── */
     .hero {
-      padding: 96px 24px 80px;
-      text-align: center;
+      padding: 72px 24px 88px;
       position: relative;
       overflow: hidden;
     }
@@ -111,21 +110,25 @@
       content: '';
       position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse 70% 50% at 50% -10%, rgba(245,166,35,0.15) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(124,92,255,0.08) 0%, transparent 60%);
+        radial-gradient(ellipse 55% 60% at 80% 20%, rgba(124,92,255,0.28) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 55% at 10% 10%, rgba(245,166,35,0.20) 0%, transparent 70%),
+        radial-gradient(ellipse 45% 45% at 60% 95%, rgba(52,211,153,0.14) 0%, transparent 70%);
       pointer-events: none;
     }
-    .hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
+    .hero-inner {
+      position: relative; max-width: 1140px; margin: 0 auto;
+      display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center;
+    }
+    .hero-copy { text-align: left; }
 
     .hero-pill {
       display: inline-flex; align-items: center; gap: 8px;
       background: rgba(255,77,77,0.10);
-      border: 1px solid rgba(255,77,77,0.25);
+      border: 1px solid rgba(255,77,77,0.28);
       border-radius: 999px;
       padding: 6px 14px 6px 8px;
-      margin-bottom: 32px;
-      font-size: 13px; color: var(--sub);
-      cursor: default;
+      margin-bottom: 26px;
+      font-size: 13px; color: #ffb3b3;
     }
     .hero-pill-badge {
       background: var(--red); color: #fff;
@@ -134,59 +137,112 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-size: clamp(2.5rem, 5.2vw, 4.1rem);
       font-weight: 900;
-      line-height: 1.1;
-      letter-spacing: -1.5px;
+      line-height: 1.04;
+      letter-spacing: -2px;
       color: var(--text);
       text-wrap: balance;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
-    .hero h1 span { color: var(--gold); }
+    .hero h1 .grad {
+      background: linear-gradient(90deg, #F5A623 0%, #FF6B9A 50%, #A78BFA 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
 
     .hero-sub {
-      font-size: clamp(15px, 2vw, 17px);
-      color: var(--sub);
-      max-width: 580px;
-      margin: 0 auto 40px;
-      line-height: 1.7;
+      font-size: clamp(15px, 1.6vw, 18px);
+      color: #b4bccd;
+      max-width: 520px;
+      margin: 0 0 30px;
+      line-height: 1.65;
     }
 
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 30px; }
+    .hero-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 14px 24px; border-radius: 14px; font-weight: 800; font-size: 15px; text-decoration: none;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .hero-btn:hover { transform: translateY(-2px); }
+    .hero-btn-gold { background: linear-gradient(135deg, #F5A623, #FF8A3D); color: #1a1205; box-shadow: 0 10px 30px rgba(245,166,35,.35); }
+    .hero-btn-ghost { border: 1.5px solid rgba(255,255,255,.18); color: var(--text); background: rgba(255,255,255,.04); }
+
+    /* the features, two to a row */
     .hero-badges {
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      flex-wrap: wrap; margin-bottom: 56px;
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;
+      max-width: 520px;
     }
     .badge-pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--card);
-      border: 1px solid var(--border);
+      display: flex; align-items: center; gap: 10px;
+      background: color-mix(in srgb, var(--c) 10%, transparent);
+      border: 1px solid color-mix(in srgb, var(--c) 35%, transparent);
       border-radius: 12px;
-      padding: 9px 16px;
-      font-size: 13px; font-weight: 600; color: var(--sub);
+      padding: 10px 14px;
+      font-size: 14px; font-weight: 700; color: var(--text); text-align: left; line-height: 1.25;
     }
-    .badge-pill svg { flex-shrink: 0; }
-    .badge-pill.urgent { border-color: rgba(255,77,77,0.3); color: #ff9090; }
+    .badge-pill .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--c); box-shadow: 0 0 10px var(--c); flex-shrink: 0; }
 
-    /* ─── HERO PHONE ─────────────────────────────── */
-    .hero-phone {
-      display: flex;
-      justify-content: center;
-    }
+    /* ─── HERO PHONES ─────────────────────────────── */
+    .hero-stage { position: relative; height: 600px; }
     .hero-phone-frame {
-      width: 260px;
-      border-radius: 44px;
-      border: 2px solid rgba(255,255,255,0.14);
+      position: absolute;
+      width: 270px;
+      border-radius: 42px;
+      border: 2px solid rgba(255,255,255,0.16);
       overflow: hidden;
       background: #000;
-      box-shadow: 0 48px 96px rgba(0,0,0,.75), 0 0 0 1px rgba(255,255,255,.05);
+      box-shadow: 0 40px 90px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.05);
     }
-    .hero-phone-frame img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .hero-phone-frame img { width: 100%; height: auto; display: block; }
+    .hero-phone-front { left: 50%; top: 0; transform: translateX(-62%) rotate(-3deg); z-index: 2; }
+    .hero-phone-back { left: 50%; top: 46px; transform: translateX(-2%) rotate(6deg); width: 240px; opacity: .92; z-index: 1; }
+
+    .float-chip {
+      position: absolute; z-index: 3;
+      display: flex; align-items: center; gap: 10px;
+      background: rgba(13,17,34,.88); backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,.12); border-radius: 16px;
+      padding: 10px 14px; box-shadow: 0 16px 40px rgba(0,0,0,.45);
+      font-size: 13px; color: var(--text);
     }
-    @media (max-width: 480px) {
+    .float-chip b { display: block; font-size: 14px; }
+    .float-chip small { color: var(--sub); font-size: 12px; }
+    .chip-ic { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; font-weight: 900; color: #fff; }
+    .chip-recall { left: -6px; top: 120px; }
+    .chip-recall .chip-ic { background: #FF4D4D; }
+    .chip-return { left: -6px; bottom: 70px; }
+    /* inside the strip of the Trip mode phone that shows beside the Home phone (always right of the Home phone's edge) */
+    .chip-trip {
+      left: calc(50% + 128px); right: auto; top: 330px; width: 132px;
+      flex-direction: column; align-items: flex-start; gap: 6px; padding: 10px 12px;
+    }
+    .chip-trip b { font-size: 13.5px; }
+    .chip-trip small { font-size: 11.5px; line-height: 1.35; display: block; }
+    .chip-trip .chip-ic { background: #3b82f6; font-size: 15px; }
+    .chip-return .chip-ic { background: #16a34a; color: #fff; }
+
+    @media (max-width: 900px) {
+      .hero { padding: 48px 20px 64px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+      .hero-copy { text-align: center; }
+      .hero-sub { margin: 0 auto 26px; }
+      .hero-ctas { justify-content: center; }
+      .hero-badges { margin: 0 auto; }
+      .hero-stage { height: 500px; max-width: 420px; margin: 0 auto; width: 100%; }
       .hero-phone-frame { width: 220px; }
+      .hero-phone-back { width: 196px; }
+      .chip-recall { left: 0; top: 70px; }
+      .chip-return { left: 0; bottom: 40px; }
+      .chip-trip { left: calc(50% + 92px); top: 250px; width: 104px; padding: 8px 9px; }
+      .chip-trip b { font-size: 12px; }
+      .chip-trip small { font-size: 10.5px; }
+    }
+    @media (max-width: 400px) {
+      .badge-pill { font-size: 12.5px; padding: 9px 10px; }
+      .hero-phone-frame { width: 190px; }
+      .hero-phone-back { width: 170px; }
+      .hero-stage { height: 430px; }
     }
 
     /* ─── SECTION WRAPPER ─────────────────────────── */
@@ -286,9 +342,10 @@
     .screenshots-section { background: var(--surface); }
     .gallery-layout {
       display: grid;
-      grid-template-columns: 280px 520px;
-      gap: 56px;
-      align-items: start;
+      grid-template-columns: 300px 560px;
+      gap: 64px;
+      align-items: center;
+      justify-content: center;
     }
     .gallery-left {
       display: flex;
@@ -387,33 +444,35 @@
       z-index: 2;
     }
 
-    .gallery-meta { max-width: 280px; min-height: 52px; }
+    .gallery-meta { max-width: 300px; min-height: 72px; }
     .gallery-label {
       font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px;
     }
     .gallery-desc {
       font-size: 13px; color: var(--sub); line-height: 1.6;
     }
+    /* the screens, as name tiles two to a row (Nov 14, 2026) */
     .gallery-thumbs {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 8px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
       align-content: start;
-      padding-top: 4px;
-      width: 520px;
+      width: 560px;
     }
     .gallery-thumb {
-      border-radius: 8px;
-      border: 2px solid transparent;
-      overflow: hidden;
-      background: #000;
-      cursor: pointer;
-      opacity: 0.45;
-      transition: border-color .15s, opacity .15s;
+      display: flex; align-items: center; gap: 12px;
+      border-radius: 14px;
+      border: 1.5px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.03);
+      padding: 10px 14px;
+      cursor: pointer; text-align: left;
+      color: var(--sub); font-size: 14px; font-weight: 700;
+      transition: border-color .15s, background .15s, color .15s;
     }
-    .gallery-thumb img { width: 100%; height: auto; display: block; }
-    .gallery-thumb:hover { opacity: 0.7; }
-    .gallery-thumb.active { border-color: var(--gold); opacity: 1; }
+    .gallery-thumb .num { font-size: 12px; font-weight: 800; color: rgba(255,255,255,.35); width: 20px; flex-shrink: 0; }
+    .gallery-thumb:hover { color: var(--text); background: rgba(255,255,255,.06); }
+    .gallery-thumb.active { border-color: var(--gold); background: rgba(245,166,35,.12); color: var(--text); }
+    .gallery-thumb.active .num { color: var(--gold); }
     @media (max-width: 760px) {
       .gallery-layout {
         grid-template-columns: 1fr;
@@ -422,14 +481,14 @@
       .gallery-meta { max-width: 260px; }
       .gallery-thumbs {
         width: 100%;
-        max-width: 380px;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 6px;
+        max-width: 420px;
+        gap: 8px;
       }
+      .gallery-meta { text-align: center; }
     }
     @media (max-width: 420px) {
       .iphone-frame { width: 240px; }
-      .gallery-thumbs { grid-template-columns: repeat(6, 1fr); }
+      .gallery-thumb { font-size: 13px; padding: 9px 10px; }
     }
 
     /* ─── STATS ───────────────────────────────────── */
@@ -766,45 +825,45 @@
 <!-- ── HERO ─────────────────────────────────────── -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-pill">
-      <span class="hero-pill-badge">NEW</span>
-      CPSC Safety Recall monitoring — automatic alerts for your purchases
-    </div>
+    <!-- Left: the promise (Nov 14, 2026 redesign: two columns, text beside the phones) -->
+    <div class="hero-copy">
+      <div class="hero-pill">
+        <span class="hero-pill-badge">NEW</span>
+        Safety recalls, matched to what you own
+      </div>
 
-    <h1>Your purchases, protected.<br>Safety recalls, <span>caught automatically.</span></h1>
+      <h1>Everything you buy, <span class="grad">looked after.</span></h1>
 
-    <p class="hero-sub">
-      MajaSam monitors every return window, warranty, price drop, and CPSC safety recall — then alerts you before money walks out the door or something dangerous stays in your home.
-    </p>
+      <p class="hero-sub">
+        MajaSam keeps the receipt, counts down every return window and warranty, catches price drops and safety recalls, and helps you claim when something breaks.
+      </p>
 
-    <div class="hero-badges">
-      <div class="badge-pill urgent">
-        <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><path d="M8 2L2 13h12L8 2z" stroke="#FF4D4D" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 6v4M8 11.5v.5" stroke="#FF4D4D" stroke-width="1.5" stroke-linecap="round"/></svg>
-        Safety recall alerts
+      <div class="hero-ctas">
+        <a href="#waitlist" class="hero-btn hero-btn-gold">Get Early Access</a>
+        <a href="#screenshots" class="hero-btn hero-btn-ghost">See the app &rarr;</a>
       </div>
-      <div class="badge-pill">
-        <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" stroke="#F5A623" stroke-width="1.5"/><path d="M8 4v4l2.5 2.5" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/></svg>
-        Return window tracking
-      </div>
-      <div class="badge-pill">
-        <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><path d="M2 8l4 4 8-8" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Warranty management
-      </div>
-      <div class="badge-pill">
-        <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><path d="M3 8h10M9 5l4 3-4 3" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Price drop alerts
-      </div>
-      <div class="badge-pill">
-        <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><rect x="2" y="3" width="12" height="10" rx="2" stroke="#F5A623" stroke-width="1.5"/><path d="M5 7h6M5 10h4" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/></svg>
-        Gmail auto-import
+
+      <div class="hero-badges">
+        <div class="badge-pill" style="--c:#FF4D4D"><span class="dot"></span>Safety recall alerts</div>
+        <div class="badge-pill" style="--c:#F5A623"><span class="dot"></span>Return window countdowns</div>
+        <div class="badge-pill" style="--c:#34D399"><span class="dot"></span>Warranty and claims</div>
+        <div class="badge-pill" style="--c:#60A5FA"><span class="dot"></span>Price drop alerts</div>
+        <div class="badge-pill" style="--c:#A78BFA"><span class="dot"></span>Trips and your car</div>
+        <div class="badge-pill" style="--c:#F472B6"><span class="dot"></span>Receipts from Gmail</div>
       </div>
     </div>
 
-    <!-- Real app screenshot -->
-    <div class="hero-phone reveal">
-      <div class="hero-phone-frame">
+    <!-- Right: the app itself, two real screens -->
+    <div class="hero-stage reveal">
+      <div class="hero-phone-frame hero-phone-back">
+        <img src="screenshots/trip-mode.jpg" alt="MajaSam Trip mode with the trip board" loading="eager">
+      </div>
+      <div class="hero-phone-frame hero-phone-front">
         <img src="screenshots/home.jpg" alt="MajaSam home screen: your home with each room's items, what is still covered, and a safety recall to act on" loading="eager">
       </div>
+      <div class="float-chip chip-recall"><span class="chip-ic">!</span><div><b>Recall caught</b><small>Matched to your mattress</small></div></div>
+      <div class="float-chip chip-trip"><span class="chip-ic">&#9992;</span><div><b>Trip board</b><small>Bag ready, hotel check-in today</small></div></div>
+      <div class="float-chip chip-return"><span class="chip-ic">&#10003;</span><div><b>$18,701 still covered</b><small>By warranties and return windows</small></div></div>
     </div>
   </div>
 </section>
@@ -1348,6 +1407,7 @@
   // Screenshot gallery — big phone left, thumbnail strip right, auto-advances
   const slides = [
     { src: 'screenshots/home.jpg',                  alt: 'MajaSam home screen',                 label: 'Your Home',                   desc: 'Everything you own, room by room, with what is still covered and the one thing to do right now.' },
+    { src: 'screenshots/purchases.jpg',             alt: 'My Purchases list',                   label: 'My Purchases',                desc: 'Every purchase as a receipt, grouped by month, with its return countdown, renewal or next service right on it.' },
     { src: 'screenshots/add-purchase.jpg',          alt: 'Add a purchase',                      label: 'Add a Purchase',              desc: 'Snap a receipt, scan a barcode, or say it. MajaSam fills in the store\'s return window and the warranty for you.' },
     { src: 'screenshots/check-before-you-buy.jpg',  alt: 'Check before you buy',                label: 'Check Before You Buy',        desc: 'Standing in a store? Scan the box and see safety recalls, the return window, price match and the lowest online price before you pay. Premium.' },
     { src: 'screenshots/trip-mode.jpg',             alt: 'Trip mode',                           label: 'Trip Mode',                   desc: 'Your trip on one board: the bag you packed, the hotel, a car pickup and customs proof for the things you bring back.' },
@@ -1371,13 +1431,10 @@
 
   // Build thumbnail strip
   slides.forEach((s, i) => {
-    const thumb = document.createElement('div');
+    const thumb = document.createElement('button');
     thumb.className = 'gallery-thumb' + (i === 0 ? ' active' : '');
-    const img = document.createElement('img');
-    img.src = s.src;
-    img.alt = s.label;
-    img.loading = 'lazy';
-    thumb.appendChild(img);
+    thumb.innerHTML = '<span class="num">' + String(i + 1).padStart(2, '0') + '</span><span></span>';
+    thumb.lastChild.textContent = s.label;
     thumb.addEventListener('click', () => { goTo(i); resetTimer(); });
     thumbsWrap.appendChild(thumb);
   });
@@ -1398,7 +1455,7 @@
   }
 
   function advance() { goTo((current + 1) % slides.length); }
-  function resetTimer() { clearInterval(timer); timer = setInterval(advance, 3500); }
+  function resetTimer() { clearInterval(timer); timer = setInterval(advance, 5000); }
   resetTimer();
 
   // ── Waitlist ────────────────────────────────────────
