@@ -803,7 +803,7 @@
     <!-- Real app screenshot -->
     <div class="hero-phone reveal">
       <div class="hero-phone-frame">
-        <img src="screenshots/home.jpg" alt="MajaSam home screen showing two safety recall alerts and $27,441 protected" loading="eager">
+        <img src="screenshots/home.jpg" alt="MajaSam home screen: your home with each room's items, what is still covered, and a safety recall to act on" loading="eager">
       </div>
     </div>
   </div>
@@ -1347,18 +1347,21 @@
 
   // Screenshot gallery — big phone left, thumbnail strip right, auto-advances
   const slides = [
-    { src: 'screenshots/home.jpg',                  alt: 'MajaSam home screen',               label: 'Home Dashboard',              desc: 'Your total protection value, active safety recalls, and upcoming return windows — all in one view.' },
-    { src: 'screenshots/check-before-you-buy.jpg',  alt: 'Check before you buy',               label: 'Check Before You Buy',        desc: 'Standing in a store? Scan the box or barcode and see safety recalls, the return window, price match and the lowest online price before you pay. Premium.' },
-    { src: 'screenshots/point-and-know.jpg',        alt: 'Point and Know',                     label: 'Point and Know',              desc: 'Aim your camera at a product and see its warranty status and any safety recalls. It reads the label on your phone, so the camera view is not uploaded.' },
-    { src: 'screenshots/action-center.jpg',         alt: 'Action Center',                      label: 'Action Center',               desc: 'Every deadline, price drop, and warranty alert in one prioritized list. Nothing slips through.' },
-    { src: 'screenshots/recalls.webp',              alt: 'Product Recalls detail screen',      label: 'CPSC Safety Recalls',         desc: 'Full recall details, the exact hazard, and what to do — automatically matched to your specific purchase.' },
-    { src: 'screenshots/lock-screen.jpg',           alt: 'Lock Screen Live Activities',        label: 'Lock Screen & Live Activity', desc: 'Return window countdowns and safety recalls live on your lock screen. Tap one to open that purchase.' },
-    { src: 'screenshots/widget.jpg',                alt: 'Home Screen Widget',                 label: 'Home Screen Widget',          desc: 'See your urgent items and recoverable value at a glance, right on your Home Screen.' },
-    { src: 'screenshots/home-inventory.jpg',        alt: 'Home Inventory PDF',                 label: 'Home Inventory PDF',          desc: 'One tap builds a PDF of everything you own: photos, serial numbers, what you paid and totals by category. Ready to hand to your insurer.' },
-    { src: 'screenshots/currency-conversions.jpg',  alt: 'Currency conversions',               label: 'Currency Conversions',        desc: 'Buy in any currency. MajaSam converts at the rate on the day you bought it, so your totals stay honest.' },
-    { src: 'screenshots/gmail-receipts.jpg',        alt: 'Gmail receipt scan',                 label: 'Find Receipts in Gmail',      desc: 'Optional, read-only. MajaSam finds receipt emails and adds them as purchases for you to confirm.' },
-    { src: 'screenshots/family-vault.jpg',         alt: 'Family Vault shared purchases',      label: 'Family Vault',                desc: 'Share a vault with your family. You approve who joins, then see everyone\'s purchases, return deadlines, and recalls in one place.' },
-    { src: 'screenshots/protection-score.jpg',      alt: 'Item detail with Protection Score',  label: 'Protection Score',            desc: 'Each item gets a score based on warranty coverage, return window, documentation quality, and claim history.' },
+    { src: 'screenshots/home.jpg',                  alt: 'MajaSam home screen',                 label: 'Your Home',                   desc: 'Everything you own, room by room, with what is still covered and the one thing to do right now.' },
+    { src: 'screenshots/add-purchase.jpg',          alt: 'Add a purchase',                      label: 'Add a Purchase',              desc: 'Snap a receipt, scan a barcode, or say it. MajaSam fills in the store\'s return window and the warranty for you.' },
+    { src: 'screenshots/check-before-you-buy.jpg',  alt: 'Check before you buy',                label: 'Check Before You Buy',        desc: 'Standing in a store? Scan the box and see safety recalls, the return window, price match and the lowest online price before you pay. Premium.' },
+    { src: 'screenshots/trip-mode.jpg',             alt: 'Trip mode',                           label: 'Trip Mode',                   desc: 'Your trip on one board: the bag you packed, the hotel, a car pickup and customs proof for the things you bring back.' },
+    { src: 'screenshots/ride-to-hotel.jpg',         alt: 'Ride to the hotel',                   label: 'Ride to the Hotel',           desc: 'Landed? Open Uber or Lyft with your hotel already set as the drop-off.' },
+    { src: 'screenshots/my-car.jpg',                alt: 'My car',                              label: 'My Car',                      desc: 'Recalls on your VIN, service history, the next inspection and an upkeep score, all in your glovebox.' },
+    { src: 'screenshots/item-details.jpg',          alt: 'Item details',                        label: 'Item Details',                desc: 'Each item\'s return window and warranty on one ruler, the one thing to do now, and help when something happens.' },
+    { src: 'screenshots/recalls.jpg',               alt: 'Product recall detail screen',        label: 'Safety Recalls',              desc: 'The exact hazard and what to do, matched to the things you own, with the official notice one tap away.' },
+    { src: 'screenshots/action-center.jpg',         alt: 'Action Center',                       label: 'Action Center',               desc: 'Every deadline, price drop and recall in one list, most urgent first. Nothing slips through.' },
+    { src: 'screenshots/protection-score.jpg',      alt: 'Protection Score',                    label: 'Protection Score',            desc: 'A score for how well each item is covered: warranty, return window, receipts and claim history.' },
+    { src: 'screenshots/lock-screen.jpg',           alt: 'Lock Screen Live Activities',         label: 'Lock Screen & Live Activity', desc: 'Return window countdowns and safety recalls live on your lock screen. Tap one to open that purchase.' },
+    { src: 'screenshots/widget.jpg',                alt: 'Home Screen Widget',                  label: 'Home Screen Widget',          desc: 'See your urgent items and recoverable value at a glance, right on your Home Screen.' },
+    { src: 'screenshots/point-and-know.jpg',        alt: 'Point and Know',                      label: 'Point and Know',              desc: 'Aim your camera at a product and see its warranty status and any safety recalls. It reads the label on your phone, so the camera view is not uploaded.' },
+    { src: 'screenshots/home-inventory.jpg',        alt: 'Home Inventory PDF',                  label: 'Home Inventory PDF',          desc: 'One tap builds a PDF of everything you own: photos, serial numbers, what you paid and totals by category. Ready to hand to your insurer.' },
+    { src: 'screenshots/gmail-receipts.jpg',        alt: 'Gmail receipt scan',                  label: 'Find Receipts in Gmail',      desc: 'Optional, read-only. MajaSam finds receipt emails and adds them as purchases for you to confirm.' },
   ];
   const galleryImg   = document.getElementById('gallery-img');
   const galleryLabel = document.getElementById('gallery-label');
