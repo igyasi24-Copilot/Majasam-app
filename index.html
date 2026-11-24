@@ -497,6 +497,8 @@
     .video-row {
       display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
     }
+    .video-row.demo-row { grid-template-columns: repeat(2, minmax(0, 280px)); margin-bottom: 36px; }
+    .video-group-label { font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: .04em; text-transform: uppercase; margin: 0 0 14px; }
     .video-card {
       background: var(--card); border: 1px solid var(--border);
       border-radius: var(--radius); padding: 10px; display: flex; flex-direction: column;
@@ -516,6 +518,7 @@
         -webkit-overflow-scrolling: touch;
       }
       .video-card { scroll-snap-align: start; }
+      .video-row.demo-row { grid-template-columns: none; }
     }
     @media (min-width: 560px) and (max-width: 900px) {
       .video-row { grid-auto-columns: 36%; }
@@ -1083,6 +1086,20 @@
     <p class="eyebrow reveal">Watch</p>
     <h2 class="section-heading reveal">See MajaSam in action.</h2>
     <p class="section-sub reveal">Quick videos showing what the app does for you.</p>
+    <p class="video-group-label reveal">Real app, real phone</p>
+    <div class="video-row demo-row reveal">
+      <div class="video-card">
+        <video src="videos/06-scan-demo.mp4#t=0.1" controls playsinline preload="metadata" aria-label="Scan it before you buy it, app demo"></video>
+        <div class="video-title">Scan it before you buy it</div>
+        <div class="video-desc">Point at the box: recalls checked, and your warranty saved when you buy.</div>
+      </div>
+      <div class="video-card">
+        <video src="videos/07-receipt-demo.mp4#t=0.1" controls playsinline preload="metadata" aria-label="Share a receipt photo, app demo"></video>
+        <div class="video-title">Share a receipt photo</div>
+        <div class="video-desc">Every item read for you, with a warning before the return window closes.</div>
+      </div>
+    </div>
+    <p class="video-group-label reveal">Quick tips</p>
     <div class="video-row reveal">
       <div class="video-card">
         <video src="videos/01-black-friday.mp4#t=0.1" controls playsinline preload="metadata" aria-label="Black Friday, covered"></video>
