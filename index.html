@@ -5,6 +5,8 @@
   <link rel="canonical" href="https://majasam.com/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="apple-itunes-app" content="app-id=6811484480">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <title>MajaSam — Track Every Purchase</title>
   <meta name="description" content="MajaSam tracks every purchase, monitors CPSC safety recalls, price drops, return windows, and warranties — so you never lose money or miss a safety alert.">
 
@@ -12,14 +14,14 @@
   <meta property="og:url" content="https://majasam.com/">
   <meta property="og:title" content="MajaSam — Track Every Purchase">
   <meta property="og:description" content="MajaSam tracks every purchase, monitors CPSC safety recalls, price drops, return windows, and warranties — so you never lose money or miss a safety alert.">
-  <meta property="og:image" content="https://majasam.com/og-image.png">
+  <meta property="og:image" content="https://majasam.com/og-image.png?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MajaSam — Track Every Purchase">
   <meta name="twitter:description" content="MajaSam tracks every purchase, monitors CPSC safety recalls, price drops, return windows, and warranties — so you never lose money or miss a safety alert.">
-  <meta name="twitter:image" content="https://majasam.com/og-image.png">
+  <meta name="twitter:image" content="https://majasam.com/og-image.png?v=2">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,9 +75,7 @@
     }
     .nav-logo-icon {
       width: 34px; height: 34px; border-radius: 10px;
-      background: linear-gradient(135deg, var(--gold) 0%, #e8891a 100%);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 17px; flex-shrink: 0;
+      display: block; flex-shrink: 0; box-shadow: 0 0 0 1px rgba(255,255,255,.14);
     }
     .nav-links {
       display: flex; align-items: center; gap: 28px; list-style: none;
@@ -697,9 +697,7 @@
     }
     .footer-logo-icon {
       width: 30px; height: 30px; border-radius: 9px;
-      background: linear-gradient(135deg, var(--gold) 0%, #e8891a 100%);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 14px;
+      display: block; flex-shrink: 0; box-shadow: 0 0 0 1px rgba(255,255,255,.14);
     }
     .footer-desc { font-size: 13.5px; color: var(--sub); line-height: 1.7; max-width: 280px; }
     .footer-col h4 { font-size: 12px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--sub2); margin-bottom: 16px; }
@@ -808,7 +806,7 @@
 <!-- ── NAV ──────────────────────────────────────── -->
 <nav>
   <a href="#" class="nav-logo">
-    <div class="nav-logo-icon">🛍️</div>
+    <img class="nav-logo-icon" src="apple-touch-icon.png" alt="">
     MajaSam
   </a>
   <ul class="nav-links">
@@ -1419,7 +1417,7 @@
   <div class="footer-inner">
     <div>
       <a href="#" class="footer-logo">
-        <div class="footer-logo-icon">🛍️</div>
+        <img class="footer-logo-icon" src="apple-touch-icon.png" alt="">
         MajaSam
       </a>
       <p class="footer-desc">Track purchases, warranties, and safety recalls — and never lose money or miss a critical alert again.</p>
